@@ -47,6 +47,20 @@ function reset() {
 }
 
 
+function selectAnswer(e) {
+    const selectedAnswer = e.target;
+    const correct = selectedAnswer.dataset.correct;
+    setStatusClass(document.body, correct);
+    Array.from(answerBtns.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffleQuestions.length > currentQuestion + 1) {
+        nextBtn.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+}
 
 
 const myQuestions = [{
