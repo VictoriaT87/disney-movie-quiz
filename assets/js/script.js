@@ -1,9 +1,8 @@
 const startButton = document.getElementById('start-btn');
 const quizContainer = document.getElementById('quiz-container');
 const quizSection = document.getElementById('quiz');
-const question = document.getElementById('question');
-const answerBtns = document.getElementsByClassName('btns');
-const startBtn = document.getElementById('start-btn');
+const questionSection = document.getElementById('question');
+const answerBtns = document.getElementById('answer-buttons');
 const nextBtn = document.getElementById('next-btn');
 
 
@@ -11,18 +10,44 @@ startButton.addEventListener('click', startGame);
 
 function startGame() {
     startButton.classList.add('hide');
-
     document.getElementById("logo").style.visibility = "hidden";
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
-    currentQuestionIndex = 0;
+    currentQuestion = 0;
     quizSection.classList.remove('hide');
     setNextQuestion();
 }
 
 function setNextQuestion() {
+    resetState();
+    showQuestion(shuffleQuestions[currentQuestion]);
+}
+
+function showQuestion(question) {
+    questionSection.innerHTML = `<img src=${question.question} class="image">`
+
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+        answerBtns.appendChild(button)
+    })
 
 }
+
+function resetState() {
+    nextBtn.classList.add('hide');
+    while (answerBtns.firstChild) {
+        answerBtns.removeChild(answerBtns.firstChild)
+    }
+  }
+
+
+
 
 const myQuestions = [{
         question: 'assets/images/frozen.jpg',
