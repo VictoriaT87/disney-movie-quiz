@@ -19,7 +19,7 @@ function startGame() {
 }
 
 function setNextQuestion() {
-    resetState();
+    reset();
     showQuestion(shuffleQuestions[currentQuestion]);
 }
 
@@ -39,12 +39,12 @@ function showQuestion(question) {
 
 }
 
-function resetState() {
+function reset() {
     nextBtn.classList.add('hide');
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild)
     }
-  }
+}
 
 
 
