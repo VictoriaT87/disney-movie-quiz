@@ -7,18 +7,22 @@ const nextBtn = document.getElementById('next-btn');
 
 
 startButton.addEventListener('click', startGame);
+nextBtn.addEventListener('click', () => {
+    currentQuestion++;
+    nextQuestion();
+  });
 
 function startGame() {
     startButton.classList.add('hide');
-    document.getElementById("logo").style.visibility = "hidden";
+    document.getElementById("logo").style.display = "none";
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
     quizSection.classList.remove('hide');
-    setNextQuestion();
+    nextQuestion();
 }
 
-function setNextQuestion() {
+function nextQuestion() {
     reset();
     showQuestion(shuffleQuestions[currentQuestion]);
 }
@@ -42,6 +46,7 @@ function showQuestion(question) {
 }
 
 function reset() {
+    clearStatusClass(document.body);
     nextBtn.classList.add('hide');
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild)
@@ -49,10 +54,10 @@ function reset() {
 }
 
 
-function selectAnswer(e) {
-    const selectedAnswer = e.target;
-    const correct = selectedAnswer.dataset.correct;
-    setStatusClass(document.body, correct);
+function selectAnswer(event) {
+    const selectedAnswer = event.target;
+    const correctAnswer = selectedAnswer.dataset.correct;
+    setStatusClass(document.body, correctAnswer);
     Array.from(answerBtns.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
@@ -64,6 +69,19 @@ function selectAnswer(e) {
     }
 }
 
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('incorrect')
+    }
+}
+
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('incorrect')
+}
 
 const myQuestions = [{
         question: 'assets/images/frozen.jpg',

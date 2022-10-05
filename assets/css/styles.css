@@ -11,3 +11,16 @@ body {
 .hide {
     display: none;
 }
+
+#question img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
