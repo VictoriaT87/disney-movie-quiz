@@ -3,3 +3,11 @@
 body {
     font-family: 'Mouse Memoirs', sans-serif;
 }
+
+.btn-grid {
+    display: grid;
+}
+
+.hide {
+    display: none;
+}

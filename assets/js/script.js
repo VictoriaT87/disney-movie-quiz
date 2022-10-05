@@ -27,14 +27,16 @@ function showQuestion(question) {
     questionSection.innerHTML = `<img src=${question.question} class="image">`
 
     question.answers.forEach(answer => {
-        const button = document.createElement('button')
+
+        const button = document.createElement("button");
         button.innerText = answer.text
-        button.classList.add('btn')
+        button.className = "btn";
+        
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
         button.addEventListener('click', selectAnswer)
-        answerBtns.appendChild(button)
+        answerBtns.appendChild(button);
     })
 
 }
