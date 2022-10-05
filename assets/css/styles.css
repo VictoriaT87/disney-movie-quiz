@@ -4,18 +4,64 @@ body {
     font-family: 'Mouse Memoirs', sans-serif;
 }
 
+#heading {
+    text-align: center;
+    font-size: 3em;
+    margin: 1%;
+}
+
+#quiz-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#question {
+    display: flex;
+    justify-content: center;
+}
+
+#question img {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
 .btn-grid {
     display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
 }
+
+.btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+  }
 
 .hide {
     display: none;
 }
 
-#question img {
-    width: 50%;
-    margin: 0 auto;
-}
+
 
 .correct {
     background-color: green;
