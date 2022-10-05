@@ -4,25 +4,36 @@ const quizSection = document.getElementById('quiz');
 const questionSection = document.getElementById('question');
 const answerBtns = document.getElementById('answer-buttons');
 const nextBtn = document.getElementById('next-btn');
+const progressText = document.getElementById('progress-text');
+const progressBarFull = document.getElementById('progress-bar-full');
+
+let score = 0;
+let currentQuestion = 0;
+let max_questions = 10;
+let availableQuestions = [];
 
 
 startButton.addEventListener('click', startGame);
 nextBtn.addEventListener('click', () => {
     currentQuestion++;
     nextQuestion();
-  });
+});
 
 function startGame() {
     startButton.classList.add('hide');
     document.getElementById("logo").style.display = "none";
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
-    currentQuestion = 0;
+
     quizSection.classList.remove('hide');
     nextQuestion();
 }
 
 function nextQuestion() {
+    score = 0;
+    availableQuestions = [myQuestions];
+    progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
+    progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
     reset();
     showQuestion(shuffleQuestions[currentQuestion]);
 }
@@ -35,7 +46,7 @@ function showQuestion(question) {
         const button = document.createElement("button");
         button.innerText = answer.text
         button.className = "btn";
-        
+
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }

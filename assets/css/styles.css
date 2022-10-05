@@ -26,6 +26,18 @@ body {
     width: 70%;
 }
 
+#progress-bar {
+    width: 10rem;
+    height: 2rem;
+    border: 0.3rem solid #56a5eb;
+}
+
+#progress-bar-full {
+    height: 3.4rem;
+    background-color: #56a5eb;
+    width: 0%;
+}
+
 #question {
     display: flex;
     justify-content: center;
