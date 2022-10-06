@@ -14,18 +14,32 @@ let max_questions = 10;
 let availableQuestions = [];
 
 
-startButton.addEventListener('click', startGame);
+function handleSubmit(event) {
+    event.preventDefault();
+    let username = document.getElementById('username').value;
+
+    if (username == '') {
+        let errorDiv = document.getElementById('errors');
+        errorDiv.innerHTML = "<p>Please enter a username!</p>";
+        errorDiv.style.display = 'block';
+    } else {
+        console.log('Validation successful!');
+        startGame();
+    }
+}
+
+startButton.addEventListener('click', handleSubmit);
 nextBtn.addEventListener('click', nextQuestion);
 
 function startGame() {
     startButton.classList.add('hide');
     document.getElementById("logo").style.display = "none";
-    counter.style.visibility="visible";
+    counter.style.visibility = "visible";
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
 
     quizSection.classList.remove('hide');
-    nextQuestion();   
+    nextQuestion();
 }
 
 function nextQuestion() {
