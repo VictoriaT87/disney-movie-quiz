@@ -46,12 +46,12 @@ body {
     width: 10rem;
     height: 2rem;
     box-sizing: border-box;
-    border: 0.5rem solid #56a5eb;
+    border: 0.5rem solid skyblue;
 }
 
 #progress-bar-full {
     height: 1.5rem;
-    background-color: #56a5eb;
+    background-color: skyblue;
     width: 0%;
 }
 
@@ -80,6 +80,9 @@ body {
 }
 
 .btn {
+    font-family: inherit;
+    font-size: 2em;
+    background-color: skyblue;
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
@@ -91,9 +94,9 @@ body {
 
 
 .correct {
-    background-color: green;
+    background-color: springgreen;
 }
 
 .incorrect {
-    background-color: red;
+    background-color: crimson;
 }

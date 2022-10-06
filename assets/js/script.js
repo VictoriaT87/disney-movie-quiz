@@ -208,7 +208,7 @@ const myQuestions = [{
             },
             {
                 text: 'Monsters Inc.',
-                correct: true
+                correct: false
             },
             {
                 text: 'Encanto',
@@ -228,7 +228,7 @@ const myQuestions = [{
             },
             {
                 text: 'Cars',
-                correct: true
+                correct: false
             },
             {
                 text: 'Wall-E',
@@ -248,7 +248,7 @@ const myQuestions = [{
             },
             {
                 text: 'Wreck-It Ralph',
-                correct: true
+                correct: false
             },
             {
                 text: 'The Good Dinosaur',
@@ -288,7 +288,7 @@ const myQuestions = [{
             },
             {
                 text: 'Hercules',
-                correct: true
+                correct: false
             },
             {
                 text: 'Emperors New Groove',
