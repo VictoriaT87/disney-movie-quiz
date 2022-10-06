@@ -21,7 +21,6 @@ function handleSubmit(event) {
     if (username == '') {
         let errorDiv = document.getElementById('errors');
         errorDiv.innerHTML = "<p>Please enter a username!</p>";
-        errorDiv.style.display = 'block';
     } else {
         console.log('Validation successful!');
         startGame();
@@ -33,7 +32,8 @@ nextBtn.addEventListener('click', nextQuestion);
 
 function startGame() {
     startButton.classList.add('hide');
-    document.getElementById("logo").style.display = "none";
+    document.getElementById('logo').style.display = "none";
+    document.getElementById('counter').style.display = "flex";
     counter.style.visibility = "visible";
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
