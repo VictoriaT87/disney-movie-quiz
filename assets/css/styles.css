@@ -10,14 +10,26 @@ body {
     margin: 1%;
 }
 
+.hide {
+    display: none;
+}
+
 #quiz-container {
     display: flex;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+#counter {
+    display: flex;
+    visibility: hidden;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
 }
 
 #quiz {
@@ -26,15 +38,19 @@ body {
     width: 70%;
 }
 
+#progress-text {
+    font-size: 2em;
+}
+
 #progress-bar {
     width: 10rem;
     height: 2rem;
     box-sizing: border-box;
-    border: 0.3rem solid #56a5eb;
+    border: 0.5rem solid #56a5eb;
 }
 
 #progress-bar-full {
-    height: 1.4rem;
+    height: 1.5rem;
     background-color: #56a5eb;
     width: 0%;
 }
@@ -70,9 +86,7 @@ body {
     outline: none;
   }
 
-.hide {
-    display: none;
-}
+
 
 
 

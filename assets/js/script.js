@@ -4,6 +4,7 @@ const quizSection = document.getElementById('quiz');
 const questionSection = document.getElementById('question');
 const answerBtns = document.getElementById('answer-buttons');
 const nextBtn = document.getElementById('next-btn');
+const counter = document.getElementById('counter');
 const progressText = document.getElementById('progress-text');
 const progressBarFull = document.getElementById('progress-bar-full');
 
@@ -14,23 +15,22 @@ let availableQuestions = [];
 
 
 startButton.addEventListener('click', startGame);
-nextBtn.addEventListener('click', () => {
-    currentQuestion++;
-    nextQuestion();
-});
+nextBtn.addEventListener('click', nextQuestion);
 
 function startGame() {
     startButton.classList.add('hide');
     document.getElementById("logo").style.display = "none";
+    counter.style.visibility="visible";
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
 
     quizSection.classList.remove('hide');
-    nextQuestion();
+    nextQuestion();   
 }
 
 function nextQuestion() {
-    // score = 0;
+    score = 0;
+    currentQuestion++;
     availableQuestions = [myQuestions.question];
     progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
     progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
