@@ -30,8 +30,8 @@ function startGame() {
 }
 
 function nextQuestion() {
-    score = 0;
-    availableQuestions = [myQuestions];
+    // score = 0;
+    availableQuestions = [myQuestions.question];
     progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
     progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
     reset();
@@ -156,4 +156,145 @@ const myQuestions = [{
             }
         ]
     },
+    {
+        question: 'assets/images/moana.jpg',
+        answers: [{
+                text: 'The Little Mermaid',
+                correct: false
+            },
+            {
+                text: 'Moana',
+                correct: true
+            },
+            {
+                text: 'The Jungle Book',
+                correct: false
+            },
+            {
+                text: 'The Lion King',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'assets/images/hercules.jpg',
+        answers: [{
+                text: 'Ratatouille',
+                correct: false
+            },
+            {
+                text: 'Big Hero 6',
+                correct: false
+            },
+            {
+                text: 'Moana',
+                correct: false
+            },
+            {
+                text: 'Hercules',
+                correct: true
+            }
+        ]
+    },
+    {
+        question: 'assets/images/big-hero-6.jpg',
+        answers: [{
+                text: 'Big Hero 6',
+                correct: true
+            },
+            {
+                text: 'Wall-E',
+                correct: false
+            },
+            {
+                text: 'Monsters Inc.',
+                correct: true
+            },
+            {
+                text: 'Encanto',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'assets/images/wall-e.jpg',
+        answers: [{
+                text: 'Brave',
+                correct: false
+            },
+            {
+                text: 'Turning Red',
+                correct: false
+            },
+            {
+                text: 'Cars',
+                correct: true
+            },
+            {
+                text: 'Wall-E',
+                correct: true
+            }
+        ]
+    },
+    {
+        question: 'assets/images/toy-story.jpg',
+        answers: [{
+                text: 'Toy Story',
+                correct: true
+            },
+            {
+                text: 'The Incredibles',
+                correct: false
+            },
+            {
+                text: 'Wreck-It Ralph',
+                correct: true
+            },
+            {
+                text: 'The Good Dinosaur',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'assets/images/aladdin.jpg',
+        answers: [{
+                text: '101 Dalmations',
+                correct: false
+            },
+            {
+                text: 'Zootopia',
+                correct: false
+            },
+            {
+                text: 'Aladdin',
+                correct: true
+            },
+            {
+                text: 'The Jungle Book',
+                correct: false
+            }
+        ]
+    },
+    {
+        question: 'assets/images/emperors-new-groove.jpg',
+        answers: [{
+                text: 'Tarzan',
+                correct: false
+            },
+            {
+                text: 'Lilo and Stitch',
+                correct: false
+            },
+            {
+                text: 'Hercules',
+                correct: true
+            },
+            {
+                text: 'Emperors New Groove',
+                correct: true
+            }
+        ]
+    },
+
 ];

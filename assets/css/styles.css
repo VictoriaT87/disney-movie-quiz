@@ -29,11 +29,12 @@ body {
 #progress-bar {
     width: 10rem;
     height: 2rem;
+    box-sizing: border-box;
     border: 0.3rem solid #56a5eb;
 }
 
 #progress-bar-full {
-    height: 3.4rem;
+    height: 1.4rem;
     background-color: #56a5eb;
     width: 0%;
 }
