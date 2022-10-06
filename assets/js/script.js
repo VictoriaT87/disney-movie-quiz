@@ -7,6 +7,7 @@ const nextBtn = document.getElementById('next-btn');
 const counter = document.getElementById('counter');
 const progressText = document.getElementById('progress-text');
 const progressBarFull = document.getElementById('progress-bar-full');
+const form = document.getElementsByClassName('user-form');
 
 let score = 0;
 let currentQuestion = 0;
@@ -33,8 +34,8 @@ nextBtn.addEventListener('click', nextQuestion);
 function startGame() {
     startButton.classList.add('hide');
     document.getElementById('logo').style.display = "none";
-    document.getElementById('counter').style.display = "flex";
-    counter.style.visibility = "visible";
+    counter.style.display = "flex";
+    form[0].style.display = "none";
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
 
