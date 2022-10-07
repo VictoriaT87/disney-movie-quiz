@@ -15,10 +15,14 @@ let currentQuestion = 0;
 let max_questions = 10;
 let availableQuestions = [];
 
+// let savedUser = sessionStorage.setItem("storedUser", username);
+
+
 
 function handleSubmit(event) {
     event.preventDefault();
     let username = document.getElementById('username').value;
+    localStorage.setItem("name", username);
 
     if (username == '') {
         let errorDiv = document.getElementById('errors');
@@ -30,7 +34,7 @@ function handleSubmit(event) {
 
 startButton.addEventListener('click', handleSubmit);
 nextBtn.addEventListener('click', nextQuestion);
-// resultsButton.addEventListener('click', results);
+resultsButton.addEventListener('click', results);
 
 function startGame() {
     startButton.classList.add('hide');
@@ -93,21 +97,21 @@ function selectAnswer(event) {
         setStatusClass(button, button.dataset.correct)
     })
 
-    if (shuffleQuestions.length > currentQuestion+1) {
-        console.log(shuffleQuestions.length);
-        console.log(currentQuestion);
+    if (shuffleQuestions.length > currentQuestion +1) {
         nextBtn.classList.remove('hide')
-    } 
-    else {
-        startButton.innerText = 'Results'
+    } else {
+        nextBtn.innerText = 'Results'
+        counter.style.display = "none";
         resultsButton.classList.remove('hide')
-        // results();
+        results();
     }
 }
 
-// function results() {
-
-// }
+function results() {
+    answerBtns.style.display = "none";
+    let user = document.getElementById("username").innerHTML=localStorage.getItem("id");
+    questionSection.innerHTML = `<p>Well done ${user}, you scored ${score}!</p>`
+}
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
