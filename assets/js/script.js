@@ -30,7 +30,7 @@ function handleSubmit(event) {
 
 startButton.addEventListener('click', handleSubmit);
 nextBtn.addEventListener('click', nextQuestion);
-resultsButton.addEventListener('click', results);
+// resultsButton.addEventListener('click', results);
 
 function startGame() {
     startButton.classList.add('hide');
@@ -44,20 +44,10 @@ function startGame() {
     nextQuestion();
 }
 
-function nextQuestion() {
-    score = 0;
-    currentQuestion++;
-    availableQuestions = [myQuestions.question];
-    progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
-    progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
-    resetNextQuestion();
-    showQuestion(shuffleQuestions[currentQuestion]);
-}
+function showQuestion(myQuestions) {
+    questionSection.innerHTML = `<img src=${myQuestions.question} class="image">`
 
-function showQuestion(question) {
-    questionSection.innerHTML = `<img src=${question.question} class="image">`
-
-    question.answers.forEach(answer => {
+    myQuestions.answers.forEach(answer => {
 
         const button = document.createElement("button");
         button.innerText = answer.text
@@ -72,6 +62,16 @@ function showQuestion(question) {
         answerBtns.appendChild(button);
     })
 
+}
+
+function nextQuestion() {
+    score = 0;
+    currentQuestion++;
+    availableQuestions = [myQuestions.question];
+    progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
+    progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
+    resetNextQuestion();
+    showQuestion(shuffleQuestions[currentQuestion]);
 }
 
 function resetNextQuestion() {
@@ -92,19 +92,22 @@ function selectAnswer(event) {
     Array.from(answerBtns.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffleQuestions.length > currentQuestion + 2) {
+
+    if (shuffleQuestions.length > currentQuestion+1) {
+        console.log(shuffleQuestions.length);
+        console.log(currentQuestion);
         nextBtn.classList.remove('hide')
-    } else {
-        // startButton.innerText = 'Results'
+    } 
+    else {
+        startButton.innerText = 'Results'
         resultsButton.classList.remove('hide')
-        results();
+        // results();
     }
 }
 
-function results() {
-    
+// function results() {
 
-}
+// }
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -316,6 +319,26 @@ const myQuestions = [{
             },
             {
                 text: 'Emperors New Groove',
+                correct: true
+            }
+        ]
+    },
+    {
+        question: 'assets/images/lionking.jpg',
+        answers: [{
+                text: 'The Lion King',
+                correct: true
+            },
+            {
+                text: 'The Jungle Book',
+                correct: false
+            },
+            {
+                text: 'Zootopia',
+                correct: false
+            },
+            {
+                text: 'Brother Bear',
                 correct: true
             }
         ]
