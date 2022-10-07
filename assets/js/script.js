@@ -8,6 +8,7 @@ const counter = document.getElementById('counter');
 const progressText = document.getElementById('progress-text');
 const progressBarFull = document.getElementById('progress-bar-full');
 const form = document.getElementsByClassName('user-form');
+const resultsButton = document.getElementById('results-btn');
 
 let score = 0;
 let currentQuestion = 0;
@@ -23,13 +24,13 @@ function handleSubmit(event) {
         let errorDiv = document.getElementById('errors');
         errorDiv.innerHTML = "<p>Please enter a username!</p>";
     } else {
-        console.log('Validation successful!');
         startGame();
     }
 }
 
 startButton.addEventListener('click', handleSubmit);
 nextBtn.addEventListener('click', nextQuestion);
+resultsButton.addEventListener('click', results);
 
 function startGame() {
     startButton.classList.add('hide');
@@ -49,7 +50,7 @@ function nextQuestion() {
     availableQuestions = [myQuestions.question];
     progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
     progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
-    reset();
+    resetNextQuestion();
     showQuestion(shuffleQuestions[currentQuestion]);
 }
 
@@ -64,14 +65,16 @@ function showQuestion(question) {
 
         if (answer.correct) {
             button.dataset.correct = answer.correct
+            score++;
         }
+
         button.addEventListener('click', selectAnswer)
         answerBtns.appendChild(button);
     })
 
 }
 
-function reset() {
+function resetNextQuestion() {
     clearStatusClass(document.body);
     nextBtn.classList.add('hide');
     while (answerBtns.firstChild) {
@@ -89,12 +92,18 @@ function selectAnswer(event) {
     Array.from(answerBtns.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffleQuestions.length > currentQuestion + 1) {
+    if (shuffleQuestions.length > currentQuestion + 2) {
         nextBtn.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        // startButton.innerText = 'Results'
+        resultsButton.classList.remove('hide')
+        results();
     }
+}
+
+function results() {
+    
+
 }
 
 function setStatusClass(element, correct) {
