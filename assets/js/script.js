@@ -10,6 +10,8 @@ const progressBarFull = document.getElementById('progress-bar-full');
 const form = document.getElementsByClassName('user-form');
 const resultsButton = document.getElementById('results-btn');
 
+let user = document.getElementById("username");
+
 let score = 0;
 let currentQuestion = 0;
 let max_questions = 10;
@@ -21,8 +23,11 @@ let availableQuestions = [];
 
 function handleSubmit(event) {
     event.preventDefault();
-    let username = document.getElementById('username').value;
-    localStorage.setItem("name", username);
+
+    username = document.getElementById('username').value;
+
+    // let username = document.getElementById('username').value;
+    // localStorage.setItem("name", username);
 
     if (username == '') {
         let errorDiv = document.getElementById('errors');
@@ -59,7 +64,7 @@ function showQuestion(myQuestions) {
 
         if (answer.correct) {
             button.dataset.correct = answer.correct
-            score++;
+            // score++;
         }
 
         button.addEventListener('click', selectAnswer)
@@ -69,7 +74,7 @@ function showQuestion(myQuestions) {
 }
 
 function nextQuestion() {
-    score = 0;
+    // score = 0;
     currentQuestion++;
     availableQuestions = [myQuestions.question];
     progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
@@ -91,6 +96,10 @@ function selectAnswer(event) {
     const selectedAnswer = event.target;
     const correctAnswer = selectedAnswer.dataset.correct;
 
+    if (selectedAnswer.dataset.correct) {
+        score += 1;
+    }
+
     setStatusClass(document.body, correctAnswer);
 
     Array.from(answerBtns.children).forEach(button => {
@@ -109,8 +118,7 @@ function selectAnswer(event) {
 
 function results() {
     answerBtns.style.display = "none";
-    let user = document.getElementById("username").innerHTML=localStorage.getItem("id");
-    questionSection.innerHTML = `<p>Well done ${user}, you scored ${score}!</p>`
+    questionSection.innerHTML = `<p>Well done ${username}, you scored ${score}!</p>`
 }
 
 function setStatusClass(element, correct) {
