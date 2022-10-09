@@ -39,7 +39,10 @@ function handleSubmit(event) {
 }
 
 startButton.addEventListener('click', handleSubmit);
-nextBtn.addEventListener('click', nextQuestion);
+nextBtn.addEventListener('click', () => { 
+    currentQuestion++;
+    nextQuestion()
+});
 resultsBtn.addEventListener('click', results);
 restartBtn.addEventListener('click', restart);
 
@@ -48,6 +51,8 @@ function startGame() {
     document.getElementById('logo').style.display = "none";
     counter.style.display = "flex";
     form[0].classList.add('hide');
+
+    currentQuestion = 0;
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
 
@@ -76,10 +81,10 @@ function showQuestion(myQuestions) {
 
 function nextQuestion() {
     // score = 0;
-    currentQuestion++;
+    // currentQuestion++;
     availableQuestions = [myQuestions.question];
-    progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
-    progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
+    progressText.innerText = `Question ${currentQuestion+1}/${max_questions}`;
+    progressBarFull.style.width = `${(currentQuestion+1/max_questions) * 10}%`;
     resetForNextQuestion();
     showQuestion(shuffleQuestions[currentQuestion]);
 }
@@ -148,26 +153,27 @@ function clearStatusClass(element) {
     element.classList.remove('incorrect')
 }
 
-const myQuestions = [{
-        question: 'assets/images/frozen.jpg',
-        answers: [{
-                text: 'Frozen',
-                correct: true
-            },
-            {
-                text: 'Mulan',
-                correct: false
-            },
-            {
-                text: 'Dumbo',
-                correct: false
-            },
-            {
-                text: 'Pinocchio',
-                correct: false
-            }
-        ]
-    },
+const myQuestions = [
+    // {
+    //     question: 'assets/images/frozen.jpg',
+    //     answers: [{
+    //             text: 'Frozen',
+    //             correct: true
+    //         },
+    //         {
+    //             text: 'Mulan',
+    //             correct: false
+    //         },
+    //         {
+    //             text: 'Dumbo',
+    //             correct: false
+    //         },
+    //         {
+    //             text: 'Pinocchio',
+    //             correct: false
+    //         }
+    //     ]
+    // },
     {
         question: 'assets/images/mulan.jpg',
         answers: [{
