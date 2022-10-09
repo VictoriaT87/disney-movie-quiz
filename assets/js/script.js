@@ -8,7 +8,8 @@ const counter = document.getElementById('counter');
 const progressText = document.getElementById('progress-text');
 const progressBarFull = document.getElementById('progress-bar-full');
 const form = document.getElementsByClassName('user-form');
-const resultsButton = document.getElementById('results-btn');
+const resultsBtn = document.getElementById('results-btn');
+const restartBtn = document.getElementById('restart-btn');
 
 let user = document.getElementById("username");
 
@@ -39,13 +40,14 @@ function handleSubmit(event) {
 
 startButton.addEventListener('click', handleSubmit);
 nextBtn.addEventListener('click', nextQuestion);
-resultsButton.addEventListener('click', results);
+resultsBtn.addEventListener('click', results);
+restartBtn.addEventListener('click', restart);
 
 function startGame() {
     startButton.classList.add('hide');
     document.getElementById('logo').style.display = "none";
     counter.style.display = "flex";
-    form[0].style.display = "none";
+    form[0].classList.add('hide');
 
     shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
 
@@ -64,7 +66,6 @@ function showQuestion(myQuestions) {
 
         if (answer.correct) {
             button.dataset.correct = answer.correct
-            // score++;
         }
 
         button.addEventListener('click', selectAnswer)
@@ -79,18 +80,17 @@ function nextQuestion() {
     availableQuestions = [myQuestions.question];
     progressText.innerText = `Question ${currentQuestion}/${max_questions}`;
     progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
-    resetNextQuestion();
+    resetForNextQuestion();
     showQuestion(shuffleQuestions[currentQuestion]);
 }
 
-function resetNextQuestion() {
+function resetForNextQuestion() {
     clearStatusClass(document.body);
     nextBtn.classList.add('hide');
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild)
     }
 }
-
 
 function selectAnswer(event) {
     const selectedAnswer = event.target;
@@ -111,7 +111,7 @@ function selectAnswer(event) {
     } else {
         nextBtn.innerText = 'Results'
         counter.style.display = "none";
-        resultsButton.classList.remove('hide')
+        restartBtn.classList.remove('hide')
         results();
     }
 }
@@ -119,6 +119,19 @@ function selectAnswer(event) {
 function results() {
     answerBtns.style.display = "none";
     questionSection.innerHTML = `<p>Well done ${username}, you scored ${score}!</p>`
+}
+
+function restart() {
+    currentQuestion = 0;
+    score = 0;
+    startButton.classList.remove('hide');
+    quizSection.classList.add('hide');
+    quizSection.style.display = "none";
+    restartBtn.classList.add('hide');
+    document.getElementById('logo').style.display = "flex";
+    counter.style.display = "none";
+    form[0].classList.remove('hide');
+    quizSection.classList.add('hide');
 }
 
 function setStatusClass(element, correct) {
