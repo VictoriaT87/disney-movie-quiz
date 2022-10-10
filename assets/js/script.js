@@ -25,7 +25,7 @@ let availableQuestions = [];
 function handleSubmit(event) {
     event.preventDefault();
 
-    username = document.getElementById('username').value;
+    let username = document.getElementById('username').value;
 
     // let username = document.getElementById('username').value;
     // localStorage.setItem("name", username);
@@ -39,9 +39,9 @@ function handleSubmit(event) {
 }
 
 startButton.addEventListener('click', handleSubmit);
-nextBtn.addEventListener('click', () => { 
+nextBtn.addEventListener('click', () => {
     currentQuestion++;
-    nextQuestion()
+    nextQuestion();
 });
 resultsBtn.addEventListener('click', results);
 restartBtn.addEventListener('click', restart);
@@ -61,21 +61,21 @@ function startGame() {
 }
 
 function showQuestion(myQuestions) {
-    questionSection.innerHTML = `<img src=${myQuestions.question} id="quiz-image">`
+    questionSection.innerHTML = `<img src=${myQuestions.question} id="quiz-image">`;
 
     myQuestions.answers.forEach(answer => {
 
         const button = document.createElement("button");
-        button.innerText = answer.text
+        button.innerText = answer.text;
         button.className = "btn";
 
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
 
         button.addEventListener('click', selectAnswer)
         answerBtns.appendChild(button);
-    })
+    });
 
 }
 
@@ -93,7 +93,7 @@ function resetForNextQuestion() {
     clearStatusClass(document.body);
     nextBtn.classList.add('hide');
     while (answerBtns.firstChild) {
-        answerBtns.removeChild(answerBtns.firstChild)
+        answerBtns.removeChild(answerBtns.firstChild);
     }
 }
 
@@ -105,25 +105,23 @@ function selectAnswer(event) {
         score += 1;
     }
 
-    setStatusClass(document.body, correctAnswer);
-
     Array.from(answerBtns.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+        setStatusClass(button, button.dataset.correct);
+    });
 
-    if (shuffleQuestions.length > currentQuestion +1) {
-        nextBtn.classList.remove('hide')
+    if (shuffleQuestions.length > currentQuestion + 1) {
+        nextBtn.classList.remove('hide');
     } else {
-        nextBtn.innerText = 'Results'
+        nextBtn.innerText = 'Results';
         counter.style.display = "none";
-        restartBtn.classList.remove('hide')
+        restartBtn.classList.remove('hide');
         results();
     }
 }
 
 function results() {
     answerBtns.style.display = "none";
-    questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${username}, you scored ${score}!</p></div>`
+    questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${username}, you scored ${score}!</p></div>`;
 }
 
 function restart() {
@@ -133,21 +131,21 @@ function restart() {
 }
 
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
+
     } else {
-        element.classList.add('incorrect')
+        element.classList.add('incorrect');
     }
 }
 
 function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('incorrect')
+    element.classList.remove('correct');
+    element.classList.remove('incorrect');
 }
 
-const myQuestions = [
-    {
+const myQuestions = [{
         question: 'assets/images/mulan.jpg',
         answers: [{
                 text: 'Aladdin',

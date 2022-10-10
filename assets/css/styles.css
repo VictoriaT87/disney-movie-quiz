@@ -89,9 +89,10 @@ input[type=text] {
 #counter {
     display: none;
     /* display: flex; */
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     align-items: center;
+    flex-direction: column-reverse;
 }
 
 #quiz {
@@ -108,12 +109,13 @@ input[type=text] {
     width: 10rem;
     height: 2rem;
     box-sizing: border-box;
-    border: 0.5rem solid skyblue;
+    border: 0.5rem solid #b6c7fb;
 }
 
 #progress-bar-full {
     height: 1.5rem;
-    background-color: skyblue;
+    /* border: 1px solid #FBEAB6; */
+    background-color: #b6c7fb;
     width: 0%;
 }
 
@@ -138,7 +140,7 @@ input[type=text] {
 .btn {
     font-family: inherit;
     font-size: 2em;
-    background-color: skyblue;
+    background-color: #b6c7fb;
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
@@ -146,11 +148,11 @@ input[type=text] {
 }
 
 .correct {
-    background-color: springgreen;
+    background-color: #baffba;
 }
 
 .incorrect {
-    background-color: crimson;
+    background-color: #f087a8;
 }
 
 #results-div {
