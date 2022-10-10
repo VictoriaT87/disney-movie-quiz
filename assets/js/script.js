@@ -188,18 +188,18 @@ const myQuestions = [
         ]
     },
     {
-        question: 'assets/images/moana.jpg',
+        question: 'assets/images/batb.jpg',
         answers: [{
                 text: 'The Little Mermaid',
                 correct: false
             },
             {
                 text: 'Moana',
-                correct: true
+                correct: false
             },
             {
-                text: 'The Jungle Book',
-                correct: false
+                text: 'Beauty and the Beast',
+                correct: true
             },
             {
                 text: 'The Lion King',
@@ -228,9 +228,9 @@ const myQuestions = [
         ]
     },
     {
-        question: 'assets/images/big-hero-6.jpg',
+        question: 'assets/images/tangled.jpg',
         answers: [{
-                text: 'Big Hero 6',
+                text: 'Tangled',
                 correct: true
             },
             {
@@ -248,7 +248,7 @@ const myQuestions = [
         ]
     },
     {
-        question: 'assets/images/wall-e.jpg',
+        question: 'assets/images/lilo.jpg',
         answers: [{
                 text: 'Brave',
                 correct: false
@@ -258,11 +258,11 @@ const myQuestions = [
                 correct: false
             },
             {
-                text: 'Cars',
+                text: 'Monsters University',
                 correct: false
             },
             {
-                text: 'Wall-E',
+                text: 'Lilo and Stitch',
                 correct: true
             }
         ]
