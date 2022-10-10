@@ -7,7 +7,7 @@ const nextBtn = document.getElementById('next-btn');
 const counter = document.getElementById('counter');
 const progressText = document.getElementById('progress-text');
 const progressBarFull = document.getElementById('progress-bar-full');
-const form = document.getElementsByClassName('user-form');
+const form = document.getElementById('user-form');
 const resultsBtn = document.getElementById('results-btn');
 const restartBtn = document.getElementById('restart-btn');
 
@@ -50,7 +50,7 @@ function startGame() {
     startButton.classList.add('hide');
     document.getElementById('logo').style.display = "none";
     counter.style.display = "flex";
-    form[0].classList.add('hide');
+    form.style.display = "none";
 
     currentQuestion = 0;
 
@@ -61,7 +61,7 @@ function startGame() {
 }
 
 function showQuestion(myQuestions) {
-    questionSection.innerHTML = `<img src=${myQuestions.question} class="image">`
+    questionSection.innerHTML = `<img src=${myQuestions.question} id="quiz-image">`
 
     myQuestions.answers.forEach(answer => {
 
@@ -123,20 +123,13 @@ function selectAnswer(event) {
 
 function results() {
     answerBtns.style.display = "none";
-    questionSection.innerHTML = `<p>Well done ${username}, you scored ${score}!</p>`
+    questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${username}, you scored ${score}!</p></div>`
 }
 
 function restart() {
     currentQuestion = 0;
     score = 0;
-    startButton.classList.remove('hide');
-    quizSection.classList.add('hide');
-    quizSection.style.display = "none";
-    restartBtn.classList.add('hide');
-    document.getElementById('logo').style.display = "flex";
-    counter.style.display = "none";
-    form[0].classList.remove('hide');
-    quizSection.classList.add('hide');
+    location.reload(true);
 }
 
 function setStatusClass(element, correct) {
@@ -154,26 +147,6 @@ function clearStatusClass(element) {
 }
 
 const myQuestions = [
-    // {
-    //     question: 'assets/images/frozen.jpg',
-    //     answers: [{
-    //             text: 'Frozen',
-    //             correct: true
-    //         },
-    //         {
-    //             text: 'Mulan',
-    //             correct: false
-    //         },
-    //         {
-    //             text: 'Dumbo',
-    //             correct: false
-    //         },
-    //         {
-    //             text: 'Pinocchio',
-    //             correct: false
-    //         }
-    //     ]
-    // },
     {
         question: 'assets/images/mulan.jpg',
         answers: [{
@@ -370,7 +343,7 @@ const myQuestions = [
             },
             {
                 text: 'Brother Bear',
-                correct: true
+                correct: false
             }
         ]
     },

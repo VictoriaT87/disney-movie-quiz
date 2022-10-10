@@ -11,8 +11,10 @@
 </head>
 
 <body>
-    <h1 id="heading">Disney Movie Quiz</h1>
-    <p>Can you guess the Disney Movie from the image?</p>
+    <div id="heading">
+        <h1>Disney Movie Quiz</h1>
+        <p>Can you guess the Disney Movie from the image?</p>
+    </div>
 
     <div id="quiz-container">
         <img src="assets/images/disney-logo.jpg" id="logo" alt="Disney Pictures Logo">
@@ -31,13 +33,13 @@
             <div id="answer-buttons" class="btn-grid"></div>
         </div>
 
-        <form class="user-form">
+        <form id="user-form">
             <div id="username-input">
                 <label for="username">Choose a Username!</label><br>
                 <input id="username" type="text" name="username" title="Enter Username here" required>
                 <!-- Error Messages for Username Validation -->
                 <div id="errors"></div>
-            </div>            
+            </div>
         </form>
 
         <div class="controls">
