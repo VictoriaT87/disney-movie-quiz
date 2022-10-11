@@ -94,7 +94,21 @@ input[type=text] {
     margin-top: 1em;
     font-family: inherit;
     font-size: 2em;
-    background-color: #b6c7fb;
+    background-color: #85C8F0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+    width: 6em;
+}
+.start-btn:hover, .next-btn:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.next-btn {
+    font-family: inherit;
+    font-size: 2em;
+    background-color: #85C8F0;
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
@@ -115,7 +129,7 @@ input[type=text] {
     display: flex;
     flex-direction: column;
     width: 70%;
-    background: rgba(255,250,225, 0.5);
+    /* background: rgba(255,250,225, 0.5); */
 }
 
 #progress-text {
@@ -127,14 +141,14 @@ input[type=text] {
     width: 50%;
     height: 2rem;
     box-sizing: border-box;
-    border: 0.5rem solid #b6c7fb;
+    border: 0.5rem solid #85C8F0;
     border-radius: 50px;    
 }
 
 #progress-bar-full {
     width: 0%;
     height: 20px;
-    background-color: #b6c7fb;
+    background-color: #85C8F0;
     overflow: hidden;
 }
 
@@ -160,7 +174,7 @@ input[type=text] {
 .btn {
     font-family: inherit;
     font-size: 2em;
-    background-color: #b6c7fb;
+    background-color: #85C8F0;
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
@@ -168,12 +182,16 @@ input[type=text] {
     width: 11em;
 }
 
+.btn:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
 .correct {
-    background-color: #baffba;
+    background-color: #85F0AD;
 }
 
 .incorrect {
-    background-color: #f087a8;
+    background-color: #F085C8;
 }
 
 #results-div {
