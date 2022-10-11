@@ -1,5 +1,7 @@
+/* Google font based on Disney's font */
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 
+/* Remove all default margin and padding from body */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,8 @@ body {
     background-image: url("../images/bg-image.jpg");
     height: 100%;
 }
+
+/* Heading and Logo */
 
 #heading h1 {
     text-align: center;
@@ -28,21 +32,12 @@ body {
     width: 70%;
 }
 
+/* .hide is used in script.js to hide some elements until called */
 .hide {
     display: none;
 }
 
-#quiz-container {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    /* margin-top: 2em; */
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Username input section */
 .form {
     display: flex;
     width: 100%;
@@ -82,6 +77,18 @@ input[type=text] {
 
 #errors {
     padding: 10px;
+}
+
+/* Quiz Area Styles */
+#quiz-container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    /* margin-top: 2em; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .controls {
@@ -160,7 +167,7 @@ input[type=text] {
 #quiz-image {
     max-width: 65%;
     margin: 0 auto;
-    padding: 1em;
+    border: 5px solid #85C8F0;
 }
 
 .btn-grid {
@@ -210,4 +217,58 @@ input[type=text] {
     font-size: 3em;
     text-align: center;
     padding: 2em;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    color: black;
+    text-align: center;
+    font-size: 110%;
+    padding-top: 20px;
+}
+
+/* Footer social links */
+
+.social-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 5%;
+}
+
+.social-links a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.social-links ul {
+    width: 10%;
+}
+
+.social-links li {
+    display: inline;
+    text-decoration: none;
+}
+
+.social-links i {
+    font-size: 160%;
+    margin: 1%;
+    color: black;
+}
+
+.social-links i:hover {
+    color: #85C8F0;
+}
+
+.social-links p {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.3rem;
 }
