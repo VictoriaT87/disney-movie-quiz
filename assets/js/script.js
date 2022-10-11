@@ -18,17 +18,10 @@ let currentQuestion = 0;
 let max_questions = 10;
 let availableQuestions = [];
 
-// let savedUser = sessionStorage.setItem("storedUser", username);
-
-
-
 function handleSubmit(event) {
     event.preventDefault();
 
-    let username = document.getElementById('username').value;
-
-    // let username = document.getElementById('username').value;
-    // localStorage.setItem("name", username);
+    username = document.getElementById('username').value;
 
     if (username == '') {
         let errorDiv = document.getElementById('errors');
@@ -80,11 +73,10 @@ function showQuestion(myQuestions) {
 }
 
 function nextQuestion() {
-    // score = 0;
-    // currentQuestion++;
     availableQuestions = [myQuestions.question];
+    width = 10
     progressText.innerText = `Question ${currentQuestion+1}/${max_questions}`;
-    progressBarFull.style.width = `${(currentQuestion+1/max_questions) * 10}%`;
+    progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
     resetForNextQuestion();
     showQuestion(shuffleQuestions[currentQuestion]);
 }
@@ -121,7 +113,15 @@ function selectAnswer(event) {
 
 function results() {
     answerBtns.style.display = "none";
-    questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${username}, you scored ${score}!</p></div>`;
+
+    if (score < 3) {
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Sorry ${user.value}, you scored ${score}. Please try again!</p></div>`;
+    } else if (score < 6) {
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Not bad ${user.value}, you scored ${score}! Please try again!</p></div>`;
+    }  else {
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${user.value}, you scored ${score}! Disney Master!</p></div>`;
+    }
+    
 }
 
 function restart() {

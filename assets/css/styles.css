@@ -103,20 +103,22 @@ input[type=text] {
 
 #progress-text {
     font-size: 2em;
+    padding-top: 20px;
 }
 
 #progress-bar {
-    width: 10rem;
+    width: 50%;
     height: 2rem;
     box-sizing: border-box;
     border: 0.5rem solid #b6c7fb;
+    border-radius: 50px;    
 }
 
 #progress-bar-full {
-    height: 1.5rem;
-    /* border: 1px solid #FBEAB6; */
-    background-color: #b6c7fb;
     width: 0%;
+    height: 20px;
+    background-color: #b6c7fb;
+    overflow: hidden;
 }
 
 #question {
@@ -125,7 +127,7 @@ input[type=text] {
 }
 
 #quiz-image {
-    max-width: 70%;
+    max-width: 65%;
     margin: 0 auto;
     padding: 1em;
 }
@@ -135,6 +137,7 @@ input[type=text] {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
+    justify-content: center;
 }
 
 .btn {
@@ -145,6 +148,7 @@ input[type=text] {
     padding: 5px 10px;
     color: black;
     outline: none;
+    width: 11em;
 }
 
 .correct {
@@ -156,6 +160,7 @@ input[type=text] {
 }
 
 #results-div {
+    display: flex;
     background-color: white;
     width: 30em;
     height: 20em;
@@ -163,6 +168,10 @@ input[type=text] {
 }
 
 #result-text {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
     font-size: 3em;
     text-align: center;
     padding: 2em;
