@@ -62,18 +62,26 @@ body {
     max-width: 15em;
 }
 
+label {
+    text-transform: uppercase;
+}
+
 #username {
-    width: 15em;
+    width: 10em;
 }
 
 input[type=text] {
-    font-size: large;
+    font-size: 1.5rem;
     box-sizing: border-box;
     padding: 10px;
-    margin: 15px 0;
+    margin-top: 10px;
     border: 2px solid black;
     border-radius: 10px;
     font-family: inherit;
+}
+
+#errors {
+    padding: 10px;
 }
 
 .controls {
@@ -84,6 +92,14 @@ input[type=text] {
 
 .start-btn {
     margin-top: 1em;
+    font-family: inherit;
+    font-size: 2em;
+    background-color: #b6c7fb;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+    width: 6em;
 }
 
 #counter {
@@ -99,6 +115,7 @@ input[type=text] {
     display: flex;
     flex-direction: column;
     width: 70%;
+    background: rgba(255,250,225, 0.5);
 }
 
 #progress-text {
