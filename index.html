@@ -6,20 +6,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Disney Movie Quiz - Guess the Disney Movie from the images">
+    <meta name="keywords" content="Disney, Movies, Quiz, JavaScript, Disney Movies, Classic Disney">
+    <meta name="author" content="Victoria Traynor">
 
+    <!-- CSS Link -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Website Title -->
     <title>Disney Movie Quiz</title>
 </head>
 
 <body>
+    <!-- Header and Text -->
     <div id="heading">
         <h1>Disney Movie Quiz</h1>
         <p>Can you guess the Disney Movie from the image?</p>
     </div>
 
+    <!-- Quiz Container -->
     <div id="quiz-container">
         <img src="assets/images/disney-logo.jpg" id="logo" alt="Disney Pictures Logo">
 
+        <!-- Question Counter and Progress Bar -->
         <div id="counter">
             <p id="progress-text">Question</p>
             <div id="progress-bar">
@@ -27,13 +37,13 @@
             </div>
         </div>
 
+        <!-- Quiz Questions and Answer Buttons -->
         <div id="quiz" class="hide">
-
             <div id="question"></div>
-
             <div id="answer-buttons" class="btn-grid"></div>
         </div>
 
+        <!-- Username Input Form -->
         <form id="user-form">
             <div id="username-input">
                 <label for="username">Choose a Username!</label><br>
@@ -43,6 +53,7 @@
             </div>
         </form>
 
+        <!-- Control Buttons -->
         <div class="controls">
             <button id="start-btn" class="start-btn">Start</button>
             <button id="next-btn" class="next-btn hide">Next</button>
@@ -50,9 +61,11 @@
             <button id="restart-btn" class="restart-btn hide">Restart!</button>
         </div>
 
+        <!-- Results Page -->
         <div id="result" class="hide"></div>
     </div>
 
+    <!-- Footer and Social Links -->
     <footer>
         <div class="social-links">
             <ul>
@@ -72,7 +85,7 @@
     <!-- Font awesome script -->
     <script src="https://kit.fontawesome.com/52324bbdec.js" crossorigin="anonymous"></script>
 
-
+    <!-- JavaScript Link -->
     <script src="assets/js/script.js"></script>
 </body>
 
