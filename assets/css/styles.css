@@ -17,12 +17,12 @@ body {
 
 #heading h1 {
     text-align: center;
-    font-size: 3.5em;
+    font-size: 4rem;
     margin-top: 0.5em;
 }
 
 #heading p {
-    font-size: 2em;
+    font-size: 2.5rem;
     text-align: center;
     padding: 0.5em;
 }
@@ -95,7 +95,7 @@ input[type=text] {
 }
 
 #quiz-image {
-    max-width: 65%;
+    width: 65%;
     margin: 0 auto;
     border: 5px solid #85C8F0;
 }
@@ -125,7 +125,7 @@ input[type=text] {
     height: 2rem;
     box-sizing: border-box;
     border: 0.5rem solid #85C8F0;
-    border-radius: 50px;    
+    border-radius: 50px;
 }
 
 #progress-bar-full {
@@ -176,7 +176,9 @@ input[type=text] {
     outline: none;
     width: 6em;
 }
-.start-btn:hover, .next-btn:hover {
+
+.start-btn:hover,
+.next-btn:hover {
     background-color: rgba(255, 0, 0, 0.2);
 }
 
@@ -250,7 +252,7 @@ footer p {
 }
 
 .social-links ul {
-    width: 10%;
+    width: 50%;
 }
 
 .social-links li {
@@ -272,4 +274,50 @@ footer p {
     text-decoration: none;
     text-transform: capitalize;
     font-size: 1.3rem;
+}
+
+
+/* Media Queries */
+
+/* For larger screens size from 1200px and up*/
+
+@media screen and (min-width: 1200px) {
+
+    /* #quiz-image {
+        height: 100vh;
+    } */
+}
+
+/* For medium screen sizes from 768px wide and down */
+@media (max-width: 768px) {
+
+    #heading h1 {
+        font-size: 3rem;
+    }
+
+    #heading p {
+        font-size: 1.5em;
+    }
+
+    #logo {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    #quiz-image {
+        width: 15em;
+    }
+
+    .btn-grid {
+        grid-template-columns: auto;
+        margin: 10px 0;
+    }
+
+    #progress-bar, #progress-bar-full {
+        display: none;
+    }
+
+    #progress-text {
+        padding-top: 5px;
+    }
 }
