@@ -12,6 +12,7 @@ const resultsBtn = document.getElementById('results-btn');
 const restartBtn = document.getElementById('restart-btn');
 
 let user = document.getElementById("username");
+let errorDiv = document.getElementById('errors');
 
 let score = 0;
 let currentQuestion = 0;
@@ -23,9 +24,10 @@ function handleSubmit(event) {
 
     username = document.getElementById('username').value;
 
-    if (username == '') {
-        let errorDiv = document.getElementById('errors');
+    if (username == '') { 
         errorDiv.innerHTML = "<p>Please enter a username!</p>";
+    } else if (username.length <= Number(2)) {
+        errorDiv.innerHTML = "<p>Username must have 3 or more characters</p>";
     } else {
         startGame();
     }
@@ -118,10 +120,10 @@ function results() {
         questionSection.innerHTML = `<div id="results-div"><p id="result-text">Sorry ${user.value}, you scored ${score} out of ${max_questions}.<br>Please try again!</p></div>`;
     } else if (score < 6) {
         questionSection.innerHTML = `<div id="results-div"><p id="result-text">Not bad ${user.value}, you scored ${score} out of ${max_questions}!<br>Please try again!</p></div>`;
-    }  else {
+    } else {
         questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${user.value}, you scored ${score} out of ${max_questions}!<br>Disney Master!</p></div>`;
     }
-    
+
 }
 
 function restart() {
