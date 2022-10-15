@@ -188,10 +188,6 @@ input[type=text] {
     background-color: rgba(255, 0, 0, 0.2);
 }
 
-.start-btn:focus {
-    background-color: #B6C7FB;
-}
-
 .next-btn {
     font-family: inherit;
     font-size: 2em;
@@ -290,53 +286,8 @@ footer p {
 
 /* Media Queries */
 
-/* For larger screens size from 1200px and up*/
-
-@media screen and (min-width: 1200px) {
-
-    /* #quiz-image {
-        height: 100vh;
-    } */
-}
-
-/* For medium screen sizes from 992px wide and down*/
-
-@media screen and (min-width: 992px) {}
-
-/* For medium screen sizes from 768px wide and down */
-@media (min-width: 768px) {
-
-    #heading h1 {
-        font-size: 3rem;
-    }
-
-    #heading p {
-        font-size: 1.5em;
-    }
-
-    #logo {
-        width: 100%;
-        margin-top: 5%;
-    }
-
-    #quiz-image {
-        width: 15em;
-    }
-
-    .btn-grid {
-        grid-template-columns: auto;
-        margin: 10px 0;
-    }
-
-
-    #progress-text {
-        padding-top: 5px;
-    }
-}
-
-/* For medium screen sizes from 576px wide and down */
-
-@media (min-width: 320px) {
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
     body {
         background-size: cover;
     }
@@ -385,4 +336,51 @@ footer p {
     #progress-bar-full {
         display: none;
     }
+
+    #results-div {
+        margin: 1em;
+    }
+
+    #result-text {
+        font-size: 2em;
+    }
 }
+ 
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+    #heading h1 {
+        font-size: 3rem;
+    }
+
+    #heading p {
+        font-size: 1.5em;
+    }
+
+    #logo {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    #quiz-image {
+        width: 15em;
+    }
+
+    .btn-grid {
+        grid-template-columns: auto;
+        margin: 10px 0;
+    }
+
+
+    #progress-text {
+        padding-top: 5px;
+    }
+}
+ 
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {}
+ 
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {}
+ 
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {}
