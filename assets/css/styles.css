@@ -97,7 +97,7 @@ input[type=text] {
 #quiz-image {
     width: 65%;
     margin: 0 auto;
-    border: 5px solid #85C8F0;
+    border: 5px solid #B6C7FB;
 }
 
 #question {
@@ -124,14 +124,14 @@ input[type=text] {
     width: 50%;
     height: 2rem;
     box-sizing: border-box;
-    border: 0.5rem solid #85C8F0;
+    border: 0.5rem solid #B6C7FB;
     border-radius: 50px;
 }
 
 #progress-bar-full {
     width: 0%;
     height: 20px;
-    background-color: #85C8F0;
+    background-color: #B6C7FB;
     overflow: hidden;
 }
 
@@ -147,7 +147,7 @@ input[type=text] {
 .btn {
     font-family: inherit;
     font-size: 2em;
-    background-color: #85C8F0;
+    background-color: #B6C7FB;
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
@@ -169,7 +169,7 @@ input[type=text] {
     margin-top: 1em;
     font-family: inherit;
     font-size: 2em;
-    background-color: #85C8F0;
+    background-color: #B6C7FB;
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
@@ -185,7 +185,7 @@ input[type=text] {
 .next-btn {
     font-family: inherit;
     font-size: 2em;
-    background-color: #85C8F0;
+    background-color: #B6C7FB;
     border-radius: 5px;
     padding: 5px 10px;
     color: black;
@@ -195,11 +195,11 @@ input[type=text] {
 
 /* Colors for Correct and Incorrect Answers */
 .correct {
-    background-color: #85F0AD;
+    background-color: #C7FBB6;
 }
 
 .incorrect {
-    background-color: #F085C8;
+    background-color: #FBB6C7;
 }
 
 /* Results Page */
@@ -267,7 +267,7 @@ footer p {
 }
 
 .social-links i:hover {
-    color: #85C8F0;
+    color: #B6C7FB;
 }
 
 .social-links p {
