@@ -95,6 +95,8 @@ function selectAnswer(event) {
     const selectedAnswer = event.target;
     const correctAnswer = selectedAnswer.dataset.correct;
 
+    answerBtns.classList.remove('hasactive');
+
     if (selectedAnswer.dataset.correct) {
         score += 1;
     }
