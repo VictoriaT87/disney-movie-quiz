@@ -115,11 +115,11 @@ function results() {
     answerBtns.style.display = "none";
 
     if (score < 3) {
-        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Sorry ${user.value}, you scored ${score}. Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Sorry ${user.value}, you scored ${score} out of ${max_questions}.<br>Please try again!</p></div>`;
     } else if (score < 6) {
-        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Not bad ${user.value}, you scored ${score}! Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Not bad ${user.value}, you scored ${score} out of ${max_questions}!<br>Please try again!</p></div>`;
     }  else {
-        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${user.value}, you scored ${score}! Disney Master!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${user.value}, you scored ${score} out of ${max_questions}!<br>Disney Master!</p></div>`;
     }
     
 }

@@ -165,7 +165,7 @@ input[type=text] {
     justify-content: center;
 }
 
-.start-btn {
+.start-btn, .restart-btn {
     margin-top: 1em;
     font-family: inherit;
     font-size: 2em;
@@ -212,14 +212,15 @@ input[type=text] {
     margin: 3em;
 }
 
-#result-text {
+#results-div > p {
     display: flex;
     align-content: center;
     flex-direction: column;
     justify-content: center;
     font-size: 3em;
     text-align: center;
-    padding: 2em;
+    padding: 1em;
+    line-height: 1.3em;
 }
 
 /* Footer Links */
