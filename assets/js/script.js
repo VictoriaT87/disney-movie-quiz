@@ -11,7 +11,7 @@ const form = document.getElementById('user-form');
 const resultsBtn = document.getElementById('results-btn');
 const restartBtn = document.getElementById('restart-btn');
 
-let user = document.getElementById("username");
+let user = document.getElementById('username');
 let errorDiv = document.getElementById('errors');
 
 let score = 0;
@@ -94,8 +94,6 @@ function resetForNextQuestion() {
 function selectAnswer(event) {
     const selectedAnswer = event.target;
     const correctAnswer = selectedAnswer.dataset.correct;
-
-    answerBtns.classList.remove('hasactive');
 
     if (selectedAnswer.dataset.correct) {
         score += 1;
