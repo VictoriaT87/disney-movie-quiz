@@ -48,6 +48,7 @@ function startGame() {
     document.getElementById('logo').style.display = "none";
     counter.style.display = "flex";
     form.style.display = "none";
+    answerBtns.style.display = "grid";
 
     currentQuestion = 0;
 

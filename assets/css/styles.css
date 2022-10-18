@@ -63,6 +63,7 @@ body {
 }
 
 label {
+    font-size: 1em;
     text-transform: uppercase;
 }
 
@@ -142,7 +143,7 @@ input[type=text] {
 
 /* Buttons and Controls */
 .btn-grid {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
@@ -222,7 +223,7 @@ input[type=text] {
     margin: 3em;
 }
 
-#results-div>p {
+#result-text {
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -298,7 +299,7 @@ footer p {
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
     body {
-        background-size: cover;
+        background-size: contain;
     }
 
     #heading h1 {
@@ -311,8 +312,16 @@ footer p {
     }
 
     #logo {
-        margin: 1em;
-        width: 90%;
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    label {
+        font-size: 0.8em;
+    }
+
+    #errors {
+        font-size: 0.8em;
     }
 
     #quiz-container {
@@ -320,16 +329,21 @@ footer p {
     }
 
     #quiz {
-        width: 100%;
+        width: 85%;
     }
 
     #quiz-image {
         width: 100%;
+        border: 3px solid #B6C7FB
     }
 
     #progress-text {
         font-size: 1.5em;
         padding-top: 0;
+    }
+
+    .btn {
+        width: 8em;
     }
 
     .btn-grid {
@@ -352,6 +366,15 @@ footer p {
 
     #result-text {
         font-size: 2em;
+    }
+
+    
+    .social-links a {
+        font-size: 1rem;
+    }
+
+    .social-links p {
+        font-size: 1rem;
     }
 }
 
@@ -382,6 +405,11 @@ footer p {
     #progress-text {
         padding-top: 5px;
     }
+
+    #result-text {
+        font-size: 2em;
+    }
+
 }
 
 /* Medium screen devices (768px and above) */
@@ -391,11 +419,10 @@ footer p {
 @media only screen and (min-width: 889px) {
     #logo {
         width: 100%;
-        margin-top: 1%;
+        margin: 1% 0;
     }
 
     .btn-grid {
-        display: grid;
         grid-template-columns: repeat(2, auto);
         gap: 10px;
         margin: 20px 0;
