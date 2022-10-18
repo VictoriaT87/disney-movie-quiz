@@ -65,6 +65,19 @@ function showQuestion(myQuestions) {
         const button = document.createElement("button");
         button.innerText = answer.text;
         button.className = "btn";
+        button.onclick = highlight;
+
+        let buttonClicked = null;
+
+        function highlight() {
+            if (buttonClicked != null) {
+                buttonClicked.style.background = "red";
+                buttonClicked.style.color = "red";
+            }
+
+            buttonClicked.style.background = "red";
+            buttonClicked.style.color = "white";
+        }
 
         if (answer.correct) {
             button.dataset.correct = answer.correct;
@@ -73,6 +86,8 @@ function showQuestion(myQuestions) {
         button.addEventListener('click', selectAnswer)
         answerBtns.appendChild(button);
     });
+
+
 
 }
 
@@ -115,6 +130,8 @@ function selectAnswer(event) {
     }
 }
 
+
+
 function results() {
     answerBtns.style.display = "none";
 
@@ -138,7 +155,6 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct');
-
     } else {
         element.classList.add('incorrect');
     }
