@@ -24,10 +24,12 @@ function handleSubmit(event) {
 
     username = document.getElementById('username').value;
 
-    if (username == '') { 
+    if (username.trim() == '') {
         errorDiv.innerHTML = "<p>Please enter a username!</p>";
     } else if (username.length <= Number(2)) {
         errorDiv.innerHTML = "<p>Username must have 3 or more characters</p>";
+    } else if (username.length > Number(8)) {
+        errorDiv.innerHTML = "<p>Username must have 8 or less characters</p>";
     } else {
         startGame();
     }
@@ -145,6 +147,33 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('incorrect');
+}
+
+/**
+ * Remove all hover effects on mobile, found here:
+ * https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+ */
+function hasTouch() {
+    return 'ontouchstart' in document.documentElement ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0;
+}
+
+if (hasTouch()) { // remove all the :hover stylesheets
+    try { // prevent exception on browsers not supporting DOM styleSheets properly
+        for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) {}
 }
 
 const myQuestions = [{
