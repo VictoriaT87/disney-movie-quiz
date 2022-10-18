@@ -127,26 +127,17 @@ input[type=text] {
 }
 
 #progress-bar {
-    width: 50%;
-    height: 2rem;
-    box-sizing: border-box;
-    border: 0.5rem solid #B6C7FB;
-    border-radius: 50px;
+    display: none;
 }
 
 #progress-bar-full {
-    width: 0%;
-    height: 20px;
-    background-color: #B6C7FB;
-    overflow: hidden;
+    display: none;
 }
 
 /* Buttons and Controls */
 .btn-grid {
     display: none;
-    grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 20px 0;
     justify-content: center;
 }
 
@@ -377,11 +368,11 @@ footer p {
 /* Small screen devices (600px and above) */
 @media only screen and (min-width: 600px) {
     #heading h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     #heading p {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
 
     #logo {
@@ -395,9 +386,9 @@ footer p {
     #quiz-image {
         width: 100%;
     }
-
+    
     .btn-grid {
-        grid-template-columns: auto;
+        margin: 1em 0;
     }
 
     .btn {
@@ -406,12 +397,20 @@ footer p {
 
     #progress-text {
         padding-top: 5px;
+        font-size: 1.5em;
     }
 
 }
 
-/* Medium screen devices (768px and above) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    .btn-grid {
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        margin: 10px;
+        justify-content: center;
+    }
+}
 
 /* Big screen devices (889px and above) */
 @media only screen and (min-width: 889px) {
@@ -423,7 +422,7 @@ footer p {
     .btn-grid {
         grid-template-columns: repeat(2, auto);
         gap: 10px;
-        margin: 20px 0;
+        margin: 10px;
         justify-content: center;
     }
 
@@ -437,6 +436,21 @@ footer p {
     #logo {
         width: 65%;
         margin-top: 1%;
+    }
+
+    #progress-bar {
+        width: 50%;
+        height: 2rem;
+        box-sizing: border-box;
+        border: 0.5rem solid #B6C7FB;
+        border-radius: 50px;
+    }
+    
+    #progress-bar-full {
+        width: 0%;
+        height: 20px;
+        background-color: #B6C7FB;
+        overflow: hidden;
     }
 
     #user-form {
