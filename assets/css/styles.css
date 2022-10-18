@@ -266,6 +266,7 @@ footer p {
 .social-links a:visited {
     color: black;
 }
+
 .social-links ul {
     width: 50%;
 }
@@ -363,7 +364,7 @@ footer p {
     #results-div {
         margin: 1em;
     }
-    
+
     .social-links a {
         font-size: 1rem;
     }
@@ -385,7 +386,6 @@ footer p {
 
     #logo {
         width: 100%;
-        margin-top: 5%;
     }
 
     #user-form {
@@ -411,16 +411,15 @@ footer p {
 }
 
 /* Medium screen devices (768px and above) */
-@media only screen and (min-width: 768px) {
-    
-}
+@media only screen and (min-width: 768px) {}
 
 /* Big screen devices (889px and above) */
 @media only screen and (min-width: 889px) {
     #logo {
-        width: 100%;
+        width: 85%;
         margin: 1% 0;
     }
+
     .btn-grid {
         grid-template-columns: repeat(2, auto);
         gap: 10px;
@@ -428,7 +427,6 @@ footer p {
         justify-content: center;
     }
 
-   
     #result-text {
         font-size: 3em;
     }
@@ -437,8 +435,12 @@ footer p {
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 1200px) {
     #logo {
-        width: 70%;
+        width: 65%;
         margin-top: 1%;
+    }
+
+    #user-form {
+        margin-top: 0;
     }
 
     #quiz-image {

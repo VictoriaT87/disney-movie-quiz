@@ -14,6 +14,7 @@ const restartBtn = document.getElementById('restart-btn');
 let user = document.getElementById('username');
 let errorDiv = document.getElementById('errors');
 
+let shuffleQuestions;
 let score = 0;
 let currentQuestion = 0;
 let max_questions = 10;
@@ -79,14 +80,11 @@ function showQuestion(myQuestions) {
         button.addEventListener('click', selectAnswer);
         answerBtns.appendChild(button);
     });
-
-
-
 }
 
 function nextQuestion() {
     availableQuestions = [myQuestions.question];
-    width = 10
+    width = 10;
     progressText.innerText = `Question ${currentQuestion+1}/${max_questions}`;
     progressBarFull.style.width = `${(currentQuestion/max_questions) * 100}%`;
     resetForNextQuestion();
