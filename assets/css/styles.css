@@ -262,6 +262,9 @@ footer p {
     font-size: 1.2rem;
 }
 
+.social-links a:visited {
+    color: black;
+}
 .social-links ul {
     width: 50%;
 }
@@ -270,6 +273,8 @@ footer p {
     display: inline;
     text-decoration: none;
 }
+
+
 
 .social-links i {
     font-size: 160%;

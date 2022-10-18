@@ -108,8 +108,6 @@ function selectAnswer(event) {
         score += 1;
     }
 
-    answerBtns.disabled = true;
-
     Array.from(answerBtns.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
         button.disabled = true;
