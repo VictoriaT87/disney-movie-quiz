@@ -64,26 +64,18 @@ function showQuestion(myQuestions) {
 
         const button = document.createElement("button");
         button.innerText = answer.text;
-        button.className = "btn";
+        button.classList.add('btn', 'btn-hover');
         button.onclick = highlight;
 
-        let buttonClicked = null;
-
         function highlight() {
-            if (buttonClicked != null) {
-                buttonClicked.style.background = "red";
-                buttonClicked.style.color = "red";
-            }
-
-            buttonClicked.style.background = "red";
-            buttonClicked.style.color = "white";
+            button.style.borderColor = '#B6C7FB';
         }
 
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
 
-        button.addEventListener('click', selectAnswer)
+        button.addEventListener('click', selectAnswer);
         answerBtns.appendChild(button);
     });
 
@@ -116,8 +108,12 @@ function selectAnswer(event) {
         score += 1;
     }
 
+    answerBtns.disabled = true;
+
     Array.from(answerBtns.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
+        button.disabled = true;
+        button.classList.remove('btn-hover');
     });
 
     if (shuffleQuestions.length > currentQuestion + 1) {
