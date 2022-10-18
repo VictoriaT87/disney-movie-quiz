@@ -410,6 +410,10 @@ footer p {
         margin: 10px;
         justify-content: center;
     }
+
+    #progress-text {
+        font-size: 2rem;
+    }
 }
 
 /* Big screen devices (889px and above) */
@@ -433,9 +437,23 @@ footer p {
 
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 1200px) {
+
+    #heading h1 {
+        font-size: 4rem;
+    }
+
+    #heading p {
+        font-size: 2rem;
+        padding: 0.2rem;
+    }
+    
     #logo {
         width: 75%;
         margin-top: 1%;
+    }
+
+    #counter {
+        padding: 0.5em 0;
     }
 
     #progress-bar {
