@@ -299,7 +299,8 @@ footer {
     footer {
         height: 2em;
     }
-  }
+}
+
 @media only screen and (max-width: 595px) {
     body {
         background-size: contain;
@@ -388,6 +389,7 @@ footer {
 
     #logo {
         width: 100%;
+        margin-top: 2em;
     }
 
     #user-form {
@@ -399,7 +401,7 @@ footer {
     }
 
     .btn-grid {
-        margin: 1em 0;
+        margin: 3em 0;
     }
 
     .btn {
@@ -407,7 +409,7 @@ footer {
     }
 
     #progress-text {
-        padding-top: 5px;
+        padding: 10px;
         font-size: 1.5em;
     }
 
@@ -415,8 +417,11 @@ footer {
 
 @media only screen and (min-width: 768px) {
 
+    #logo {
+        margin-top: 2em;
+    }
+
     .btn-grid {
-        grid-template-columns: repeat(2, auto);
         gap: 10px;
         margin: 10px;
         justify-content: center;
@@ -431,7 +436,11 @@ footer {
 @media only screen and (min-width: 889px) {
     #logo {
         width: 85%;
-        margin: 1% 0;
+    }
+
+    #progress-text {
+        font-size: 2rem;
+        padding: 10px;
     }
 
     .btn-grid {
@@ -460,7 +469,7 @@ footer {
 
     #logo {
         width: 70%;
-        margin-top: 2%;
+        margin: 2%;
     }
 
     #counter {
@@ -488,6 +497,7 @@ footer {
 
     #quiz-image {
         width: 65%;
+        margin-bottom: 1.2em;
     }
 
 }
