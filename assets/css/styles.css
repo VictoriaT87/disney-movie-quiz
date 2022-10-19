@@ -232,16 +232,17 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    height: 2em;
     background-color: #B6C7FB;
+    display: flex;
 }
 
 /* Footer social links */
 .social-links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 5%;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .social-links a {
@@ -286,6 +287,19 @@ footer {
 /* Media Queries */
 
 /* For extremely small screen devices (595px and below) */
+@media (orientation: landscape) {
+    body {
+        height: 50em;
+    }
+
+    #logo {
+        margin-top: 2%;
+    }
+
+    footer {
+        height: 2em;
+    }
+  }
 @media only screen and (max-width: 595px) {
     body {
         background-size: contain;
