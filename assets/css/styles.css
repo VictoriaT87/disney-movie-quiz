@@ -301,7 +301,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 595px) {
+@media only screen and (max-width: 599px) {
     body {
         background-size: contain;
     }
