@@ -11,15 +11,9 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 # Table of Contents
 
 1. [Features](#features)  
-    * [Navigation Bar](#navigation-bar)
-    * [Header](#header)
-    * [Landing Page](#landing-page)
-    * [About Section](#about-section)
-    * [Latest News Section](#latest-news-section)
-    * [Fixtures Section](#fixtures-section)
-    * [League Table](#league-table)
-    * [The Footer](#the-footer)
-    * [The Contact Page](#the-contact-page)
+    * [Home Page](#home-page)
+    * [Quiz Section](#quiz-section)
+    * [Results Page](#results-page)
     * [Features Left To Implement](#features-left-to-implement)
 2. [User Experience (UX)](#user-experience-ux)
     * [Site Goals](#site-goals)
