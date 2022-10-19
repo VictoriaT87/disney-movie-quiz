@@ -28,6 +28,7 @@ header a {
 header h1 {
     text-align: center;
     font-size: 4rem;
+    padding-bottom: 10px;
 }
 
 header p {
@@ -237,17 +238,10 @@ footer {
     background-color: #B6C7FB;
 }
 
-footer p {
-    color: black;
-    text-align: center;
-    font-size: 110%;
-    padding-top: 20px;
-}
-
 /* Footer social links */
 .social-links {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     width: 90%;
     margin: 0 5%;
@@ -272,22 +266,22 @@ footer p {
     text-decoration: none;
 }
 
-
-
 .social-links i {
-    font-size: 160%;
+    font-size: 100%;
     margin: 1%;
     color: black;
 }
 
-.social-links i:hover {
-    color: #B6C7FB;
+.social-links i:hover, .social-links a:hover {
+    color: white;
 }
 
 .social-links p {
     text-decoration: none;
     text-transform: capitalize;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
 }
 
 
@@ -453,8 +447,8 @@ footer p {
     }
     
     #logo {
-        width: 75%;
-        margin-top: 1%;
+        width: 70%;
+    margin-top: 2%;
     }
 
     #counter {
