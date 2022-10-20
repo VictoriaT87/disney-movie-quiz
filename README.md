@@ -67,20 +67,12 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 <br>
 
-### Header
 
-  - The fully responsive header consists of the navigation bar, as well as the club's logo and text of the club's name.
-  - The image and text will scale down for each screen size, making sure the header never takes up too much space on mobile.
-  - The Logo, when clicked, will also bring the user back to the home page from the Contact page.
- 
-![Header](assets/documentation/header.png)
-  
-  <br>
+### Quiz Section
 
-### Landing Page
-
-  - The landing includes a Hero Image of the full team with a text overlay announcing that submissions are open to join the team for the next year. 
-  - This section introduces the user to the Shanganagh Cliffs Football team. It also lets the user know that they can join the team and shows off their full kit and prominent sponsorship, to entice local businesses to sponsor the team. 
+  - The Quiz Section will run when the User enters a Username and it's validated.
+  - The Quiz contains an image of a classic Disney Movie pulled from an array of questions in script.js, a counter to show which question the user is on, a progress bar (on larger screens) and 4 buttons that are generated purely in JavaScript.
+  - The Quiz container is a Flexbox, which allows for great responsiveness, and prevents the quiz from falling out of place when resized. 
 
 ![Landing Page](assets/documentation/landing-page.png)
 ![Landing Page Mobile](assets/documentation/head-about-mobile.png)
