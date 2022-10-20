@@ -190,6 +190,30 @@ The main goal of the website is to encourage visitors, disney fans and movie fan
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+- JavaScript
+  - No errors were returned when passing through [JSHint](https://jshint.com/)
+
+* Metrics Returned:
+
+    * There are 19 functions in this file.
+
+    * Function with the largest signature take 2 arguments, while the median is 0.
+
+    * Largest function has 11 statements in it, while the median is 3.
+
+    * The most complex function has a cyclomatic complexity value of 4 while the median is 1.
+
+    * 34 Warnings appear but are all the following:
+    	- 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+      - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+      - 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+      -	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+
+
+Other Warnings included;
+* Missing Semicolons - these were all corrected
+
+* Undefined Variables - these were removed as all were found to be unnecessary to the functions.
 
 ### Lighthouse Testing
  - When first tested, performance for the website was at 88. The recommendations from Lighthouse for this issue was to change images from .jpg to .webp. To do this, I used the website [WEBP Converter](https://cloudconvert.com/webp-converter). After running Lighthouse again, this changed to a 99.
