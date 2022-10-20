@@ -302,16 +302,12 @@ footer {
         margin-top: 2%;
     }
 
-    footer {
-        height: 2em;
-        margin-top: 2em;
-    }
 }
 
 @media only screen and (max-width: 599px) {
     body {
         background-size: contain;
-        height: 110vh;
+        height: 120vh;
     }
 
     header h1 {
@@ -378,6 +374,12 @@ footer {
 
     .social-links p {
         font-size: 1rem;
+    }
+
+    
+    footer {
+        height: 2em;
+        margin-top: 2em;
     }
 }
 
