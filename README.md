@@ -42,7 +42,7 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 ### Home Page
 
   - The Home Page features a splash image of the Disney Pictures Logo which is instantly recognizable. This will allow visitors to the site to know the quiz is built around Disney Movies.
-  <br>
+
 ![Index Page](assets/documentation/index-page.png)
   <br>
 
@@ -50,8 +50,6 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
   - Across all pages, a header and footer appear. The Header contains a H1 and paragraph, displaying the name of the quiz, as well as a description of what it's about. There is also an image of Mickey Mouse to further show the Disney relation.
   - The Footer contains a link to my Github, with a FontAwesome icon and a copyright.
   - Both the header and footer are within a flexbox, for great responsiveness across all devices and screen sizes.
-  <br>
- 
 
 ![Header](assets/documentation/header.png)
 ![Footer](assets/documentation/footer.png)
@@ -59,8 +57,6 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 ### Username Validation
   - On the Index page, there is a username input form. This is validated through JavaScript, and only allows a username between 3 and 8 characters long. It will throw an error is the input field is empty, contains whitespace or is too long.
-<br>
-
 
 ![Username Empty String Validation](assets/documentation/username-empty.png)
 ![Username Too Long/Short Validation](assets/documentation/username-short.png)
@@ -74,73 +70,40 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
   - The Quiz contains an image of a classic Disney Movie pulled from an array of questions in script.js, a counter to show which question the user is on, a progress bar (on larger screens) and 4 buttons that are generated purely in JavaScript.
   - The Quiz container is a Flexbox, which allows for great responsiveness, and prevents the quiz from falling out of place when resized. 
 
-![Landing Page](assets/documentation/landing-page.png)
-![Landing Page Mobile](assets/documentation/head-about-mobile.png)
+![Quiz Section](assets/documentation/quiz-section.png)
 
 <br>
 
-### About Section
+### Quiz Buttons
 
-  - The About section informs the user of how the club began, how long it's been running, the League and Division the football team is in and how to apply to join the team.
-  - This user will see that the club is a successful local team, who has won a Division Championship, and that the team consists of local men from the community. This will hopefully encourage new people to join. 
+ - The Quiz buttons are all generated through JavaScript. The inner text will pull from the question array and display on each button.
+ - The buttons have a hover effect, which is a transparency to allow the body background image shine through.
 
-![About Section](assets/documentation/about-section.png)
+![Quiz Buttons Hover Style](assets/documentation/button-hover.png)
 
-<br>
 
-### Latest News section
+ - When an answer is selected, the correct answer will turn a shade of green and the incorrect ones will turn a shade of red. The selected answer will also highlight with a blue border to match the border of the quiz.
 
-  - This section will allow the user to see all the latest news from the football club, including images from events, meetups and matches.
-  - This section will be updated with the latest news from the club. The amount of subsections within the Latest News section can be updated to allow as much information as possible to be shown to the user. 
-
-![Latest News](assets/documentation/news-section.png)
-![Latest News Mobile](assets/documentation/news-mobile.png)
+![Quiz Buttons Selected](assets/documentation/button-selected.png)
 
 <br>
 
-### Fixtures Section
+### Results Section
 
-  - The Fixtures section will show the user the latest upcoming match fixtures for the team, including the location, time and date of the next 4 matches. As each match is played on a Saturday, this should cover each month.
-  - The Fixtures section is extremely valuable to fans of the club, who will know when a local match is being played, as well as matches that some users may want to travel to to show their support.
+  - The Results Section will automatically show when the user has finished answering all 10 questions.
+  - The results show as a paragraph with a score marked out of the total questions. The score is calculated through JavaScript and increments each time an answer is selected. There are 3 possible paragraphs of text to return, depending on the score the user received.
+  - After the results div, there is a restart button. This reloads the quiz and resets all scores and the username.
 
-![Fixtures Section](assets/documentation/fixtures-section.png)
-![Fixtures Mobile](assets/documentation/fixtures-mobile.png)
-
-<br>
-
-### League Table
-
-  - The League Table section consists of a HTML table with columns and rows outlining the current standings, games played, goals for/against and the goal difference, as well as the points each team has.
-  - Having the current table is very important for a user who is a fan of the team. Knowing the team's current position, along with the upcoming fixtures, can help a user understand better how well the team is playing and will encourage support.
-
-![League Table](assets/documentation/league-table.png)
-![League Table Mobile](assets/documentation/league-table-mobile.png)
-
-### The Footer
-
-  - The Footer section includes social media links and contact links in the form of a phone number and email address.
-  - The links within the footer will allow the user direct buttons to follow the team on their social platforms and to easily get in touch with the management team for any other questions or queries.
-
-![Footer](assets/documentation/footer.png)
-
-<br>
-
-### The Contact Page
-
-  - This page allows the user to contact the team in regards to signing up, to apply for Sponsorship of the kit or for general queries. 
-  - Featuring a large background image of an overhead drone shot of the pitch that the club plays on with the contact form overlaying it, the page is striking for the user to look at.
-  - The contact page also includes an embedded Google Map to show the pitch where the team plays. This map is fully interactive, with the user able to zoom in and out and drag the map around.
-
-![Contact Page](assets/documentation/contact-page.png)
-![Contact Page](assets/documentation/contact-page-map.png)
-![Contact Page Mobile](assets/documentation/contact-mobile.png)
+![Results Section](assets/documentation/results.png)
+![Results Section](assets/documentation/results-master.png)
 
 <br>
 
 ## Features Left to Implement
 
-- Add a Gallery to the website, consisting of images of the team playing their matches, as well as fan submitted photos of fans with the jersey and travelling to support the team.
-- As well as photos, having short video clips of goals would encourage more interactivity from users of the website - both taking videos of the teams matches and submitting them for others to enjoy.
+- Adding more questions, so there is a larger pool of possible questions and answers to pull from would give the quiz more replayability. As there are
+- Give an option to share the quiz and results on social media, to generate more interest in it.
+- Adding a timer to each question. This would make sure people weren't cheating by googling the answer.
 
 <br>
 
