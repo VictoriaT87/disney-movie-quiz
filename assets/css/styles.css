@@ -368,6 +368,10 @@ footer {
         margin: 1em;
     }
 
+    #result-text {
+        font-size: 1.5em;
+    }
+
     .social-links a {
         font-size: 1rem;
     }

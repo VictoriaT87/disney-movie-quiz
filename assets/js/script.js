@@ -16,16 +16,31 @@ let errorDiv = document.getElementById('errors');
 let shuffleQuestions;
 let score = 0;
 let currentQuestion = 0;
-let max_questions = 10;
-let availableQuestions = [];
+let maxQuestions = 10;
 let width = 0;
+
+
+function startGame() {
+    startButton.classList.add('hide');
+    document.getElementById('logo').style.display = "none";
+    counter.style.display = "flex";
+    form.style.display = "none";
+    answerBtns.style.display = "grid";
+
+    currentQuestion = 0;
+
+    shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
+
+    quizSection.classList.remove('hide');
+    nextQuestion();
+}
 
 function handleSubmit(event) {
     event.preventDefault();
 
-    username = document.getElementById('username').value;
+    let username = document.getElementById('username').value;
 
-    if (username.trim() == '') {
+    if (username.trim() === '') {
         errorDiv.innerHTML = "<p>Please enter a username!</p>";
     } else if (username.length <= Number(2)) {
         errorDiv.innerHTML = "<p>Username must have 3 or more characters</p>";
@@ -44,20 +59,6 @@ nextBtn.addEventListener('click', () => {
 resultsBtn.addEventListener('click', results);
 restartBtn.addEventListener('click', restart);
 
-function startGame() {
-    startButton.classList.add('hide');
-    document.getElementById('logo').style.display = "none";
-    counter.style.display = "flex";
-    form.style.display = "none";
-    answerBtns.style.display = "grid";
-
-    currentQuestion = 0;
-
-    shuffleQuestions = myQuestions.sort(() => Math.random() - 0.5);
-
-    quizSection.classList.remove('hide');
-    nextQuestion();
-}
 
 function showQuestion(myQuestions) {
     questionSection.innerHTML = `<img src=${myQuestions.question} id="quiz-image">`;
@@ -84,9 +85,8 @@ function showQuestion(myQuestions) {
 }
 
 function nextQuestion() {
-    availableQuestions = [myQuestions.question];
     width += 10;
-    progressText.innerText = `Question ${currentQuestion+1}/${max_questions}`;
+    progressText.innerText = `Question ${currentQuestion+1}/${maxQuestions}`;
     progressBarFull.style.width = `${width}%`;
     resetForNextQuestion();
     showQuestion(shuffleQuestions[currentQuestion]);
@@ -130,11 +130,11 @@ function results() {
     answerBtns.style.display = "none";
 
     if (score < 3) {
-        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Sorry ${user.value}, you scored ${score} out of ${max_questions}.<br>Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Sorry ${user.value}, you scored ${score} out of ${maxQuestions}.<br>Please try again!</p></div>`;
     } else if (score < 6) {
-        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Not bad ${user.value}, you scored ${score} out of ${max_questions}!<br>Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Not bad ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Please try again!</p></div>`;
     } else {
-        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${user.value}, you scored ${score} out of ${max_questions}!<br>Disney Master!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><p id="result-text">Well done ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Disney Master!</p></div>`;
     }
 
 }
@@ -142,7 +142,7 @@ function results() {
 function restart() {
     currentQuestion = 0;
     score = 0;
-    location.reload(true);
+    window.location.reload(true);
 }
 
 function setStatusClass(element, correct) {
