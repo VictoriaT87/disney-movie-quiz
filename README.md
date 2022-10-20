@@ -114,48 +114,35 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 # User Experience (UX)
 
 ## Site Goals
-The main goal of the website is to encourage more fans/members of the local community to learn more about how Shanganagh Cliffs was founded and to let users know when and where the next matches will be played, to allow them to come and support the team.
+The main goal of the website is to encourage visitors, disney fans and movie fans to enjoy a quick quiz on Classic Disney Movies. The images are from movies that released between 1990 and 2020, so the quiz is fun for a large range of ages. The purpose of having different ending result paragraphs is to encourage users to retry the quiz and better their score.
 
 ## User Stories
 
-* First Time Visitor Goals
+* Users will:
 
-  As a first time visitor: 
-  * I want to understand that the website is for a local football team.
-  * I want to know more about how the club was founded.
-  * I want to know when and where the next match will be.
-  * I want to know how where the home pitch is and how to get there.
+  * Understand that the website is a Disney Movie quiz, based on images.
+  * Be able to easily use the website, on desktop and mobile.
+  * Return to the home page at any time.
+  * Retry the quiz easily once they finish.
+  * See their results in an easy to read manner.
+  * See the Developers information and GitHub (in an external tab).
 
-<br>
-
-* Returning Visitor Goals
-
-    As a returning visitor:    
-    * I want to know how well the team is doing in the League.
-    * I want to know the latest news about the team.
-
-<br>
-
-* Frequent Visitor Goals
-
-    As a frequent visitor:    
-    * I want the League to be updated after every match.
-    * I want to know the latest news about the team and see that it us updated regularly.
 
 <br>
 
 ## Design
 
 ### Colour Scheme
- -   The colour scheme is all designed around the colors of the team and their logo. The team uses red, black and white. I found these colours worked very well for contrasting each other throughout the site. Both the header and footer are black, with white text. The buttons on the site (back to the top and the submit button on the form), use the red color to stand out and catch the users attention that it is something they can interact with.
+ -   The colour scheme was selected once I found a background that suited the fun style of the quiz and linked into Disney. When this was found, I used the [Canva](https://www.canva.com/colors/color-wheel/) website to find complimentary colours based on the pale yellow of the background. This lead me to the pale blue for the header, footer and buttons. Once these were in place, I also used the Canva site to find Analogous colours to match the correct and incorrect colors for each button.
+
 ![Color Scheme](assets/documentation/color-scheme.png)
 
 ### Typography
- -   The font chosen for the website is a san-serif font called Ubuntu. This was picked because it has good clarity on both desktop and mobile screens. The font was found on [Google Font](https://fonts.google.com/specimen/Ubuntu) and imported to the website with a CSS import.
+ -   The font chosen for the website is a font called Mouse Memoirs. This was picked because it was developed from inspiration of the classic Disney font from the 1950's and 60's. It also has good clarity on both desktop and mobile screens. The font was found on [Google Font](https://fonts.google.com/specimen/Mouse+Memoirs) and imported to the website with a CSS import.
 
 ### Wireframe
  - My first step in creating the website was to create a wireframe using [Balsamiq](https://balsamiq.com/). Below is the image.
- ![Balsamiq Wireframe](assets/documentation/wireframe.png)
+ ![Balsamiq Wireframe](assets/documentation/quiz-wireframe.png)
 
 <br>
 
