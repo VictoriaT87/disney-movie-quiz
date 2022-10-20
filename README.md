@@ -42,18 +42,28 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 ### Home Page
 
   - The Home Page features a splash image of the Disney Pictures Logo which is instantly recognizable. This will allow visitors to the site to know the quiz is built around Disney Movies.
-  - Across all pages, a header and footer appear. The Header 
-  - These 2 items together allows the user to easily navigate from each section of the Index page back to the top Navigation, as well as easy access to the Contact Form page without needed to scroll back up to the top or pressing the refresh or back buttons. 
-  - A hamburger menu will appear when the screen is scaled down to smaller screen sizes. This hamburger menu will open from the side with a bold red background to continue the website's color scheme.
+  <br>
+![Index Page](assets/documentation/index-page.png)
+  <br>
 
-#### Navigation on Desktop
-![Nav Bar](assets/documentation/navigation-bar.png)
-#### Hamburger Navigation on Mobile
-![Hamburger Menu](assets/documentation/hamburger-menu.png)
-#### Hamburger Navigation Opened on Mobile
-![Hamburger Menu Open](assets/documentation/hamburger-menu-open.png)
-#### Back to The Top Button
-![Back to Top Button](assets/documentation/back-to-top-button.png)
+### Header and Footer
+  - Across all pages, a header and footer appear. The Header contains a H1 and paragraph, displaying the name of the quiz, as well as a description of what it's about. There is also an image of Mickey Mouse to further show the Disney relation.
+  - The Footer contains a link to my Github, with a FontAwesome icon and a copyright.
+  - Both the header and footer are within a flexbox, for great responsiveness across all devices and screen sizes.
+  <br>
+ 
+
+![Header](assets/documentation/header.png)
+![Footer](assets/documentation/footer.png)
+<br>
+
+### Username Validation
+  - On the Index page, there is a username input form. This is validated through JavaScript, and only allows a username between 3 and 8 characters long. It will throw an error is the input field is empty, contains whitespace or is too long.
+<br>
+
+
+![Username Empty String Validation](assets/documentation/username-empty.png)
+![Username Too Long/Short Validation](assets/documentation/username-short.png)
 
 <br>
 
