@@ -72,6 +72,7 @@ function showQuestion(myQuestions) {
 
         function highlight() {
             button.style.borderColor = '#B6C7FB';
+            button.style.borderStyle = 'inset';
         }
 
         if (answer.correct) {
