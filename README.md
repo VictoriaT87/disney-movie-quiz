@@ -195,8 +195,8 @@ The main goal of the website is to encourage visitors, disney fans and movie fan
  - When first tested, performance for the website was at 88. The recommendations from Lighthouse for this issue was to change images from .jpg to .webp. To do this, I used the website [WEBP Converter](https://cloudconvert.com/webp-converter). After running Lighthouse again, this changed to a 99.
  - The other recommendations Lighthouse gave me to speed up performance, was to do with the caching of images. I tried to research this issue but it was to do with the configuration of the server, and adding "Cache-Control" to the server header. As I don't have access to this, I could not change it.
 
- ![Lighthouse Report](assets/documentation/lighthouse.png)
- ![Lighthouse Metrics](assets/documentation/lighthouse-metrics.png)
+ ![Lighthouse Report](assets/documentation/index-lighthouse.png)
+ ![Lighthouse Metrics](assets/documentation/mobile-lighthouse.png)
 
  <br>
 
