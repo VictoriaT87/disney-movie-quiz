@@ -4,6 +4,8 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 ![Website responsiveness on multiple screen sizes](assets/documentation/responsive-screenshot.png)
 
+![Website responsiveness on multiple screen sizes](assets/documentation/responsive-quiz.png)
+
 [Live link to The Disney Movie Quiz Website](https://victoriat87.github.io/disney-movie-quiz/)
 
 <br>
@@ -37,10 +39,10 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 ## Existing Features
 
-### Navigation Bar
+### Home Page
 
-  - Featured on both the main index page and the contact form page, the full responsive navigation bar includes links to each section of the Home page -  the Logo, About, News, Fixtures and the current League Table - as well as to the separate Contact Form page. This allows for easy navigation across the site.
-  - Connected to the Navigation bar is a "Return to Top" button. This will show to the bottom right of the screen when the user scrolls below the header and allows the user to easily return to the Navigation menu with one button. 
+  - The Home Page features a splash image of the Disney Pictures Logo which is instantly recognizable. This will allow visitors to the site to know the quiz is built around Disney Movies.
+  - Across all pages, a header and footer appear. The Header 
   - These 2 items together allows the user to easily navigate from each section of the Index page back to the top Navigation, as well as easy access to the Contact Form page without needed to scroll back up to the top or pressing the refresh or back buttons. 
   - A hamburger menu will appear when the screen is scaled down to smaller screen sizes. This hamburger menu will open from the side with a bold red background to continue the website's color scheme.
 
