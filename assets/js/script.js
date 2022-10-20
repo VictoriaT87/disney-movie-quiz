@@ -1,5 +1,4 @@
 const startButton = document.getElementById('start-btn');
-const quizContainer = document.getElementById('quiz-container');
 const quizSection = document.getElementById('quiz');
 const questionSection = document.getElementById('question');
 const answerBtns = document.getElementById('answer-buttons');
@@ -105,7 +104,7 @@ function selectAnswer(event) {
     const selectedAnswer = event.target;
     const correctAnswer = selectedAnswer.dataset.correct;
 
-    if (selectedAnswer.dataset.correct) {
+    if (correctAnswer) {
         score += 1;
     }
 
@@ -164,31 +163,31 @@ function clearStatusClass(element) {
  * Remove all hover effects on mobile, found here:
  * https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
  */
- function watchForHover() {
+function watchForHover() {
     // lastTouchTime is used for ignoring emulated mousemove events
-    let lastTouchTime = 0
-  
+    let lastTouchTime = 0;
+
     function enableHover() {
-      if (new Date() - lastTouchTime < 500) return
-      document.body.classList.add('hasHover')
+        if (new Date() - lastTouchTime < 500) return;
+        document.body.classList.add('hasHover');
     }
-  
+
     function disableHover() {
-      document.body.classList.remove('hasHover')
+        document.body.classList.remove('hasHover');
     }
-  
+
     function updateLastTouchTime() {
-      lastTouchTime = new Date()
+        lastTouchTime = new Date();
     }
-  
-    document.addEventListener('touchstart', updateLastTouchTime, true)
-    document.addEventListener('touchstart', disableHover, true)
-    document.addEventListener('mousemove', enableHover, true)
-  
-    enableHover()
-  }
-  
-  watchForHover()
+
+    document.addEventListener('touchstart', updateLastTouchTime, true);
+    document.addEventListener('touchstart', disableHover, true);
+    document.addEventListener('mousemove', enableHover, true);
+
+    enableHover();
+}
+
+watchForHover();
 
 const myQuestions = [{
         question: 'assets/images/mulan.jpg',
