@@ -164,28 +164,31 @@ function clearStatusClass(element) {
  * Remove all hover effects on mobile, found here:
  * https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
  */
-function hasTouch() {
-    return 'ontouchstart' in document.documentElement ||
-        navigator.maxTouchPoints > 0 ||
-        navigator.msMaxTouchPoints > 0;
-}
-
-if (hasTouch()) { // remove all the :hover stylesheets
-    try { // prevent exception on browsers not supporting DOM styleSheets properly
-        for (let si in document.styleSheets) {
-            let styleSheet = document.styleSheets[si];
-            if (!styleSheet.rules) continue;
-
-            for (let ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-                if (!styleSheet.rules[ri].selectorText) continue;
-
-                if (styleSheet.rules[ri].selectorText.match(':hover')) {
-                    styleSheet.deleteRule(ri);
-                }
-            }
-        }
-    } catch (ex) {}
-}
+ function watchForHover() {
+    // lastTouchTime is used for ignoring emulated mousemove events
+    let lastTouchTime = 0
+  
+    function enableHover() {
+      if (new Date() - lastTouchTime < 500) return
+      document.body.classList.add('hasHover')
+    }
+  
+    function disableHover() {
+      document.body.classList.remove('hasHover')
+    }
+  
+    function updateLastTouchTime() {
+      lastTouchTime = new Date()
+    }
+  
+    document.addEventListener('touchstart', updateLastTouchTime, true)
+    document.addEventListener('touchstart', disableHover, true)
+    document.addEventListener('mousemove', enableHover, true)
+  
+    enableHover()
+  }
+  
+  watchForHover()
 
 const myQuestions = [{
         question: 'assets/images/mulan.jpg',
