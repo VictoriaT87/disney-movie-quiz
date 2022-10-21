@@ -288,6 +288,7 @@ footer {
 }
 
 .social-links p {
+    pointer-events: none;
     text-decoration: none;
     display: flex;
     width: 45%;
