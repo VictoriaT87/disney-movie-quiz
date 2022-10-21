@@ -291,17 +291,16 @@ Other Warnings included;
 
 # Credits and Sources
 
-- Website was built using the [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template)
-- The Football Trophy image in the News Section, is taken from [Unsplash.com](https://unsplash.com/photos/exqr-l9rr94?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by photographer [Darque Kj](https://unsplash.com/@darquekj).
-- Hamburger menu code was a written with code from [MakeUseOf.com](https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/), [bloom-dan on CodePen.io](https://codepen.io/bloom-dan/pen/vKdoaM) and my fellow student [Sean Johnson](https://code-institute-room.slack.com/U03790U1LAV).
-- Back to the Top Button from [W3Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
-- Form CSS was adapted from [The Love Running Project](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode)
-- Code to fix the error "Ensure all frame and iframe elements have valid title attribute values.", was found on [Deque University](https://dequeuniversity.com/rules/axe/4.4/frame-title)
-- The solution to the Lighthouse error about site.webmanifest failing to load (adding crossorigin to the link) was found on [Medium.com from Aurélien Delogu](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3)
-- The drone image of the pitch on the Contact Form was taken by JP Traynor, my brother. He gave his permission for the image to be used in this project.
-- All other images were used with thanks to Anne Traynor, my mother, who started Shanganagh Cliffs F.C. as part of her Community Work - the images were all taken by her within the first few years of the start of the SCFC community project.
-- Table data for the League Table was populated from [The A.U.L. website](http://www.aul.ie/competition.aspx?oid=1001&id=1291#.Yxttw3bMKUk)
-
+- The basic quiz logic was built using the code-along tutorial from [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
+- All quiz images were found on [Animation Screencaps](https://animationscreencaps.com/)
+- The Disney Logo is from [Yuco.com](https://www.yuco.com/works/disney)
+- The Mickey Mouse image in the header was found on [Pngwing.com](https://www.pngwing.com/en/free-png-avcmk)
+- The progress bar is built using code from [Javascript.plainenglish.io](https://javascript.plainenglish.io/building-a-progress-bar-in-css-js-html-from-scratch-6449da06042)
+- Validating the form data was from the Love Maths Project on [Code Institute](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) and the trim method to remove whitespace was found at [W3 Schools](https://www.w3schools.com/jsref/jsref_trim_string.asp)
+- The body background image was found at [WallpaperAccess.com](https://wallpaperaccess.com/mickey-mouse-head-pattern)
+- The restart function was found on [LearnersBucket.com](https://learnersbucket.com/examples/javascript/different-ways-to-reload-refresh-page-in-javascript/)
+- The code to disable a hover effect on mobile was found on [Stack Overflow](https://stackoverflow.com/questions/2754546/can-i-disable-a-css-hover-effect-via-javascript)
+- Disabling a button after clicked was built using code found on [Alvarotrigo.com](https://alvarotrigo.com/blog/disable-button-javascript/)
 <br>
 
 [Back to Top](#table-of-contents)
@@ -319,7 +318,26 @@ The following are the steps I went through to deploy my live site:
   - Press the save button.
   - After a few minutes, you can refresh the page to see your Live Site link at the top.
 
-The live link can be found here - https://victoriat87.github.io/shanganagh-cliffs-fc/
+- To Fork the repository:
+  - On GitHub.com, navigate to the repository.
+  - In the top-right corner of the page, click Fork.
+  - Select an owner for the forked repository.
+  - By default, forks are named the same as their parent repositories. You can change the name of the fork to distinguish it further.
+  - Optionally, add a description of your fork.
+  - Choose whether to copy only the default branch or all branches to the new fork.
+  - Click Create fork.
+
+- To Clone the repository:
+  - On GitHub.com, navigate to the repository.
+  - Above the list of files, click the Code button.
+  - Copy the URL for the repository.
+  - Open Git Bash.
+  - Change the current working directory to the location where you want the cloned directory.
+  - Type git clone, and then paste the URL you copied earlier.
+  - Press Enter. Your local clone will be created.
+
+<br>
+The live link can be found here - https://victoriat87.github.io/disney-movie-quiz/
 
 <br>
 
@@ -328,10 +346,9 @@ The live link can be found here - https://victoriat87.github.io/shanganagh-cliff
 <br>
 
 # Acknowledgements
-- To my amazing boyfriend Thomas. For listening to me worry about this project for months, for editing the Contact Form background image to look extra beautiful, and for keeping me sane. 
-- My brother JP for all his QA work on the website and for the beautiful drone shot of the football pitch.
+- To my amazing boyfriend Thomas. For listening to me worry about this project for months, for keeping me sane, for helping me switch off after a long day with a cup of coffee and a bar of chocolate :)
 - My family and my cats for keeping my stress levels under control!
-- My Mentor [Jubril Akolade](https://github.com/Jubrillionaire) for all the help and for pointing me towards Flexbox. His help and guidance was invaluable.
+- My Mentor [Jubril Akolade](https://github.com/Jubrillionaire) for all the help. His guidance was invaluable.
 - Sean Finn and Sean Johnston, my fellow classmates on Slack. Your help with my many questions was super appreciated, thank you.
 
 <br>
