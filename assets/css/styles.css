@@ -252,8 +252,9 @@ footer {
 .social-links {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
+    align-content: flex-start;
 }
 
 .social-links a {
@@ -267,7 +268,7 @@ footer {
 }
 
 .social-links ul {
-    width: 50%;
+    width: 45%;
 }
 
 .social-links li {
@@ -288,10 +289,15 @@ footer {
 
 .social-links p {
     text-decoration: none;
+    display: flex;
+    width: 45%;
     text-transform: capitalize;
     font-size: 1.2rem;
     color: black;
     text-align: center;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
 }
 
 
