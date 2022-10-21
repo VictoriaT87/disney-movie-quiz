@@ -229,13 +229,23 @@ Other Warnings included;
  ![Lighthouse Metrics](assets/documentation/mobile-lighthouse.png)
  ![Lighthouse Metrics](assets/documentation/mobile-metrics.png)
 
+| Page | Device | Category | Result |
+|------|--------|----------|--------|
+|Index | Mobile | Performance | 96% |
+|||Accessibility| 100% |
+|||Best Practice | 100% |
+|||SEO | 100% |
+|| Desktop | Performance | 100% |
+||| Accessibility | 100% |
+||| Best Practice | 100% |
+||| SEO | 100% |
  <br>
 
 
 ### Other Testing
- - The website has been tested across various screen sizes, using the Chrome DevTools responsive device section, [Responsive Design Checker](https://responsivedesignchecker.com/) and by opening the website on Firefox, Chrome, 3 various sized Android phones (Huawei P20 Lite, OnePlus 9 Pro, Samsung Galaxy S20) and an Android tablet (Samsung Galaxy Tab A8). 
+ - The website has been tested across various screen sizes, using the Chrome DevTools responsive device section, [Responsive Design Checker](https://responsivedesignchecker.com/) and by opening the website on Firefox, Chrome, 3 various sized Android phones (Huawei P20 Lite, OnePlus 9 Pro, Samsung Galaxy S20) and an Android tablet (Samsung Galaxy Tab 10). 
+ - [Markdown file of device screenshots](assets/documentation/tested-devices.md)
 
-[Markdown file of device screenshots](assets/documentation/tested-devices.md)
  <br>
 
 
