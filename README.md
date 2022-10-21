@@ -221,33 +221,15 @@ Other Warnings included;
   
 ![Lighthouse Report](assets/documentation/index-lighthouse.png)
 
- - On mobile, the performace is 96.
- - The recommendations from Lighthouse for this issue was to change images from .jpg to .webp. To do this, I used the website [WEBP Converter](https://cloudconvert.com/webp-converter). After running Lighthouse again, this changed to a 99.
- - The other recommendations Lighthouse gave me to speed up performance, was to do with the caching of images. I tried to research this issue but it was to do with the configuration of the server, and adding "Cache-Control" to the server header. As I don't have access to this, I could not change it.
-
+ - On mobile, the performace is 96. This was because of a cumulative layout shift of 0.15. Recommendations for this were to add width and height to images and change the main logo to a .webp.
+ - To change images from .jpg to .webp I used the website [WEBP Converter](https://cloudconvert.com/webp-converter).
+ - Even after these changes, there is still a CLS of 0.141. As I have already given everything a max-width and height, this is the best I can achieve.
 
  ![Lighthouse Metrics](assets/documentation/mobile-lighthouse.png)
+ ![Lighthouse Metrics](assets/documentation/mobile-metrics.png)
 
  <br>
 
- - Lighthouse was also used on the Contact Page. When first tested, this gave an Accessibility rating of 97. The reason given for this was because the iFrame for the embedded Google Map did not have a title. This was added and the report returned 100.
-
- ![Lighthouse Contact Page](assets/documentation/lighthouse-contact.png) 
-
- <br>
-
- - Best Practices was set at a 92 for each page. Reading the error, it was coming from the site.webmanifest used in the Favicon. Researching this lead me to understand that I needed to add crossorigin="use-credentials" to this link tag. This corrected all the errors and returned 100 across all pages in Lighthouse.
-
-![Lighthouse Error](assets/documentation/lighthouse-error.png) 
-
- <br>
-
- - Report on mobile, when the hero image was present, gave an 82 performance score. This was to do with a Large Contentful Paint - the loading of the image. I decided to remove it from mobile versions.
-
-![Lighthouse Error](assets/documentation/mobile-performance.png)
-![Lighthouse Error](assets/documentation/mobile-report.png)
-
-<br>
 
 ### Other Testing
  - The website has been tested across various screen sizes, using the Chrome DevTools responsive device section and by opening the website on Firefox, Chrome, 3 various sized Android phones (Huawei P20 Lite, OnePlus 9 Pro, Samsung Galaxy S20) and an Android tablet (Samsung Galaxy Tab A8). 
