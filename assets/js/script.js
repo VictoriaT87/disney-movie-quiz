@@ -84,6 +84,7 @@ restartBtn.addEventListener('click', restart);
 function showQuestion(myQuestions) {
     questionSection.innerHTML = `<img src=${myQuestions.question} id="quiz-image">`;
 
+    //create a button for each answer, add text to each from array
     myQuestions.answers.forEach(answer => {
 
         const button = document.createElement("button");
@@ -91,6 +92,7 @@ function showQuestion(myQuestions) {
         button.classList.add('btn', 'btn-hover');
         button.onclick = highlight;
 
+        // when a button is clicked, highlight which was chosen with a border
         function highlight() {
             button.style.borderColor = '#B6C7FB';
             button.style.borderStyle = 'inset';
@@ -143,12 +145,15 @@ function selectAnswer(event) {
         score += 1;
     }
 
+    // when a button is selected, add a color, disable them, remove hover effect
     Array.from(answerBtns.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
         button.disabled = true;
         button.classList.remove('btn-hover');
     });
 
+    // add the next button as long as there is another question in array
+    // when array of questions ends, show the results div and restart button
     if (shuffleQuestions.length > currentQuestion + 1) {
         nextBtn.classList.remove('hide');
     } else {
