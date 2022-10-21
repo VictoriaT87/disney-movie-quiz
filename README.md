@@ -176,6 +176,7 @@ The main goal of the website is to encourage visitors, disney fans and movie fan
 * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Stack Overflow](https://stackoverflow.com/)
 * [Favicon.io](https://favicon.io/)
+* [Responsive Design Checker](https://responsivedesignchecker.com/)
 
 <br>
 
@@ -232,63 +233,11 @@ Other Warnings included;
 
 
 ### Other Testing
- - The website has been tested across various screen sizes, using the Chrome DevTools responsive device section and by opening the website on Firefox, Chrome, 3 various sized Android phones (Huawei P20 Lite, OnePlus 9 Pro, Samsung Galaxy S20) and an Android tablet (Samsung Galaxy Tab A8). 
+ - The website has been tested across various screen sizes, using the Chrome DevTools responsive device section, [Responsive Design Checker](https://responsivedesignchecker.com/) and by opening the website on Firefox, Chrome, 3 various sized Android phones (Huawei P20 Lite, OnePlus 9 Pro, Samsung Galaxy S20) and an Android tablet (Samsung Galaxy Tab A8). 
 
+[Markdown file of device screenshots](assets/documentation/tested-devices.md)
  <br>
 
- - Huawei P20 Lite Vertical 
- <br>
-
-![Huawei Vertical](assets/documentation/huawei-vertical.jpg)
-
-<br>
-
-- Huawei P20 Lite Horizontal
-<br>
-
-![Huawei Horizontal](assets/documentation/huawei-horizontal.jpg)
-
-<br>
-
-- Samsung Tab A8 Vertical
-<br>
-
-![Samsung Tab A8 Vertical](assets/documentation/samsung-tab-vertical.png)
-
-<br>
-
-- Samsung Tab A8 Horizontal
-<br>
-
-![Samsung Tab A8 Horizontal](assets/documentation/samsung-tab-horizontal.png)
-
-<br>
-
-- One Plus 9 Pro Horizontal
-<br>
-
-![One Plus 9 Pro Vertical](assets/documentation/one-plus-vertical.jpg)
-
-<br>
-
-- One Plus 9 Pro Horizontal
-![One Plus 9 Pro Horizontal](assets/documentation/one-plus-horizontal.jpg)
-
-<br>
-
-- One Plus 9 Pro Vertical Hamburger Menu
-<br>
-
-![One Plus 9 Pro Horizontal](assets/documentation/one-plus-hamburger.jpg) 
-
-<br>
-
-- One Plus 9 Pro Vertical Fixtures Section
-<br>
-
-![One Plus 9 Pro Horizontal](assets/documentation/one-plus-vertical-fixtures.jpg)
-
-<br>
 
 [Back to Top](#table-of-contents)
 
