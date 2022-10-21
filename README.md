@@ -127,7 +127,6 @@ The main goal of the website is to encourage visitors, disney fans and movie fan
   * See their results in an easy to read manner.
   * See the Developers information and GitHub (in an external tab).
 
-
 <br>
 
 ## Design
@@ -171,6 +170,7 @@ The main goal of the website is to encourage visitors, disney fans and movie fan
 * [Am I Responsive](https://ui.dev/amiresponsive)
 * [W3C HTML Validation](https://validator.w3.org/)
 * [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
+* [JSHint](https://jshint.com/)
 * [Lighthouse](https://web.dev/measure/)
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
@@ -216,11 +216,12 @@ Other Warnings included;
 * Undefined Variables - these were removed as all were found to be unnecessary to the functions.
 
 ### Lighthouse Testing
- - When tested on desktop, performance for the website is 100 across all categories. 
+ - When tested on desktop, the website scores 100 across all categories. 
  <br>
   
 ![Lighthouse Report](assets/documentation/index-lighthouse.png)
 
+ - On mobile, the performace is 96.
  - The recommendations from Lighthouse for this issue was to change images from .jpg to .webp. To do this, I used the website [WEBP Converter](https://cloudconvert.com/webp-converter). After running Lighthouse again, this changed to a 99.
  - The other recommendations Lighthouse gave me to speed up performance, was to do with the caching of images. I tried to research this issue but it was to do with the configuration of the server, and adding "Cache-Control" to the server header. As I don't have access to this, I could not change it.
 
