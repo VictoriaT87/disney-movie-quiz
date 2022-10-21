@@ -46,7 +46,7 @@ header p {
 
 #logo {
     display: flex;
-    max-width: 70%;
+    width: 70%;
     height: auto;
 }
 
@@ -97,8 +97,7 @@ input[type=text] {
 /* Quiz Container and Image Styles */
 #quiz-container {
     display: flex;
-    max-width: 80%;
-    
+    width: 80%;
     height: auto;
     margin: 0 auto;
     flex-direction: column;
@@ -110,11 +109,11 @@ input[type=text] {
 #quiz {
     display: flex;
     flex-direction: column;
-    max-width: 70%;
+    width: 70%;
 }
 
 #quiz-image {
-    max-width: 65%;
+    width: 65%;
     height: auto;
     margin: 0 auto;
     border: 5px solid #B6C7FB;
