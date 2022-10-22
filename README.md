@@ -126,7 +126,7 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 ### Results Section
 
   - The Results Section will automatically show when the user has finished answering all 10 questions.
-  - The results show as a paragraph with a score marked out of the total questions. The score is calculated through JavaScript and increments each time an answer is selected. There are 3 possible paragraphs of text to return, depending on the score the user received.
+  - The results show as an image and a paragraph with a score marked out of the total questions. The score is calculated through JavaScript and increments each time an answer is selected. There are 3 possible paragraphs of text to return, depending on the score the user received.
   - After the results div, there is a restart button. This reloads the quiz and resets all scores and the username.
 
 ![Results Section](assets/documentation/results.png)
