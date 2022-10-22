@@ -25,6 +25,30 @@ let maxQuestions = 10;
 let width = 0;
 
 
+/**
+ * Modal Box for Instructions - found on https://www.w3schools.com/howto/howto_css_modals.asp
+ */
+let modal = document.getElementById("instructions");
+let btn = document.getElementById("instructionsBtn");
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 /** 
  * startGame function will hide the Disney logo, start button and username input,
  * and will show the answer buttons, quiz container and shuffle the questions from myQuestions array 

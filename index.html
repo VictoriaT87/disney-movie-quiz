@@ -20,11 +20,12 @@
 <body>
     <!-- Header and Text -->
     <header><a href="index.html">
-            <h1>Disney Movie Quiz <img src="assets/images/mickey-mouse-head.png" width="564" height="564" alt="Mickey Mouse winking"></h1>
+            <h1>Disney Movie Quiz <img src="assets/images/mickey-mouse-head.png" width="564" height="564"
+                    alt="Mickey Mouse winking"></h1>
         </a>
         <p>Can you guess the Disney Movie from the image?</p>
     </header>
-    
+
     <!-- Quiz Container -->
     <div id="quiz-container">
         <img src="assets/images/disney-logo.webp" width="900" height="383" id="logo" alt="Disney Pictures Logo">
@@ -55,6 +56,19 @@
 
         <!-- Control Buttons -->
         <div class="controls">
+            <!-- Trigger/Open Instructions -->
+            <button id="instructionsBtn">Instructions</button>
+            <!-- The Instructions Modal Box -->
+            <div id="instructions" class="modal">
+                <!-- Instructions Text -->
+                <div class="instructions-text">
+                    <span class="close">&times;</span>
+                    <h3>Guess the Disney Movie from the image</h3>
+                    <p>Choose from 1 of 4 answers - after 10, you'll get your score!</p>
+                    <p>Try to become a Disney Master!</p>
+                </div>
+            </div>
+
             <button id="start-btn" class="start-btn">Start</button>
             <button id="next-btn" class="next-btn hide">Next</button>
             <button id="results-btn" class="results-btn hide">Results</button>
