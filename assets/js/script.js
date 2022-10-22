@@ -29,11 +29,11 @@ let width = 0;
  * Modal Box for Instructions - found on https://www.w3schools.com/howto/howto_css_modals.asp
  */
 let modal = document.getElementById("instructions");
-let btn = document.getElementById("instructionsBtn");
+let instructionsBtn = document.getElementById("instructionsBtn");
 let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+instructionsBtn.onclick = function() {
   modal.style.display = "block";
 }
 
@@ -54,6 +54,7 @@ window.onclick = function(event) {
  * and will show the answer buttons, quiz container and shuffle the questions from myQuestions array 
  */
 function startGame() {
+    instructionsBtn.classList.add('hide');
     startButton.classList.add('hide');
     document.getElementById('logo').style.display = "none";
     counter.style.display = "flex";
