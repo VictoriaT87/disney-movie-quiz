@@ -72,7 +72,7 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 <br>
 
 ### Header and Footer
-  - Across all pages, a header and footer appear. The Header contains a H1 and paragraph, displaying the name of the quiz, as well as a description of what it's about. There is also an image of Mickey Mouse to further show the Disney relation.
+  - Across all pages, a header and footer appear. The Header contains a H1 and paragraph, displaying the name of the quiz, as well as a description of what it's about. There is also an image of Mickey Mouse to further show the Disney relation. This header can be clicked by the user to return to the homepage at any time.
   - The Footer contains a link to my Github, with a FontAwesome icon and a copyright.
   - Both the header and footer are within a flexbox, for great responsiveness across all devices and screen sizes.
 
@@ -91,6 +91,7 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
   - The Quiz container is a Flexbox, which allows for great responsiveness, and prevents the quiz from falling out of place when resized. 
 
 ![Quiz Section](assets/documentation/quiz-section.png)
+![Quiz Section](assets/documentation/mobile-buttons.png)
 
 <br>
 
@@ -317,6 +318,7 @@ Other Warnings included;
 - All quiz images were found on [Animation Screencaps](https://animationscreencaps.com/)
 - The Disney Logo is from [Yuco.com](https://www.yuco.com/works/disney)
 - The Mickey Mouse image in the header was found on [Pngwing.com](https://www.pngwing.com/en/free-png-avcmk)
+- The outline of Mickey Mouse used in the Results section is from [Pngwing.com](https://www.pngwing.com/en/free-png-mfqez)
 - The progress bar is built using code from [Javascript.plainenglish.io](https://javascript.plainenglish.io/building-a-progress-bar-in-css-js-html-from-scratch-6449da06042)
 - Validating the form data was from the Love Maths Project on [Code Institute](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) and the trim method to remove whitespace was found at [W3 Schools](https://www.w3schools.com/jsref/jsref_trim_string.asp)
 - The body background image was found at [WallpaperAccess.com](https://wallpaperaccess.com/mickey-mouse-head-pattern)
