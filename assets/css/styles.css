@@ -165,9 +165,7 @@ input[type=text] {
 }
 
 /*btn-hover class is generated in script.js when the buttons are created*/
-.btn-hover:hover {
-    background-color: rgba(255, 0, 0, 0.2);
-}
+
 
 .controls {
     display: flex;
@@ -188,11 +186,6 @@ input[type=text] {
     width: 6em;
 }
 
-.start-btn:hover,
-.next-btn:hover,
-.restart-btn:hover {
-    background-color: rgba(255, 0, 0, 0.2);
-}
 
 .next-btn {
     font-family: inherit;
@@ -282,10 +275,7 @@ footer {
     color: black;
 }
 
-.social-links i:hover,
-.social-links a:hover {
-    color: white;
-}
+
 
 .social-links p {
     pointer-events: none;
@@ -303,6 +293,24 @@ footer {
 
 
 /* Media Queries */
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-hover:hover {
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .start-btn:hover,
+    .next-btn:hover,
+    .restart-btn:hover {
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .social-links i:hover,
+    .social-links a:hover {
+        color: white;
+    }
+
+}
 
 /* For extremely small screen devices (595px and below) */
 @media (orientation: landscape) {

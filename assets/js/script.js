@@ -209,36 +209,6 @@ function clearStatusClass(element) {
     element.classList.remove('incorrect');
 }
 
-/**
- * Remove all hover effects on mobile, found here:
- * https://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
- */
-function watchForHover() {
-    // lastTouchTime is used for ignoring emulated mousemove events
-    let lastTouchTime = 0;
-
-    function enableHover() {
-        if (new Date() - lastTouchTime < 500) return;
-        document.body.classList.add('hasHover');
-    }
-
-    function disableHover() {
-        document.body.classList.remove('hasHover');
-    }
-
-    function updateLastTouchTime() {
-        lastTouchTime = new Date();
-    }
-
-    document.addEventListener('touchstart', updateLastTouchTime, true);
-    document.addEventListener('touchstart', disableHover, true);
-    document.addEventListener('mousemove', enableHover, true);
-
-    enableHover();
-}
-
-watchForHover();
-
 // Question array
 const myQuestions = [{
     question: 'assets/images/mulan.jpg',
