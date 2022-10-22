@@ -277,20 +277,27 @@ input[type=text] {
 #results-div {
     display: flex;
     background-color: white;
-    width: 30em;
-    height: 20em;
+    width: 30rem;
+    height: 25rem;
     margin: 3em;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#results-div img {
+    width: 25%;
+    height: auto;
+    margin-top: 1em;
+    display: flex;
 }
 
 #result-text {
     display: flex;
-    align-content: center;
-    flex-direction: column;
-    justify-content: center;
     font-size: 2em;
     text-align: center;
-    padding: 1em;
-    line-height: 1.3em;
+    padding: 0.5em 1em;
 }
 
 /* Footer */
@@ -468,6 +475,7 @@ footer {
 
     #results-div {
         margin: 1em;
+        height: 15em;
     }
 
     #result-text {
