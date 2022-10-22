@@ -140,7 +140,7 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 ## Features Left to Implement
 
-- Adding more questions, so there is a larger pool of possible questions and answers to pull from would give the quiz more replayability. As there are
+- Adding more questions, so there is a larger pool of possible questions and answers to pull from would give the quiz more replayability.
 - Give an option to share the quiz and results on social media, to generate more interest in it.
 - Adding a timer to each question. This would make sure people weren't cheating by googling the answer.
 
@@ -322,6 +322,7 @@ Other Warnings included;
 - The restart function was found on [LearnersBucket.com](https://learnersbucket.com/examples/javascript/different-ways-to-reload-refresh-page-in-javascript/)
 - The code to disable a hover effect on mobile was found on [Stack Overflow](https://stackoverflow.com/questions/2754546/can-i-disable-a-css-hover-effect-via-javascript)
 - Disabling a button after clicked was built using code found on [Alvarotrigo.com](https://alvarotrigo.com/blog/disable-button-javascript/)
+- Code to create a modal instructions box was found on [W3 Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
 <br>
 
 [Back to Top](#table-of-contents)
