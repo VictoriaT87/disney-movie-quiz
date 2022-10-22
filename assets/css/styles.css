@@ -159,7 +159,7 @@ input[type=text] {
 /* Quiz Container and Image Styles */
 #quiz-container {
     display: flex;
-    width: 80%;
+    max-width: 80%;
     height: auto;
     margin: 0 auto;
     flex-direction: column;

@@ -261,12 +261,13 @@ Other Warnings included;
   
 ![Lighthouse Report](assets/documentation/index-lighthouse.png)
 
- - On mobile, the performace is 96. This was because of a cumulative layout shift of 0.15. Recommendations for this were to add width and height to images and change the main logo to a .webp.
+ - On mobile, the performace is 96. This was because of a cumulative layout shift of 0.154. Recommendations for this were to add width and height to images and change the main logo to a .webp.
  - To change images from .jpg to .webp I used the website [WEBP Converter](https://cloudconvert.com/webp-converter).
- - Even after these changes, there is still a CLS of 0.141. As I have already given everything a max-width and height, this is the best I can achieve.
+ - Even after these changes, there is still a CLS of 0.154. As I have already given everything a max-width and height, this is the best I can achieve.
 
- ![Lighthouse Metrics](assets/documentation/mobile-lighthouse.png)
- ![Lighthouse Metrics](assets/documentation/mobile-metrics.png)
+![Lighthouse Metrics](assets/documentation/mobile-lighthouse.png)
+![Lighthouse Metrics](assets/documentation/mobile-metrics.png)
+![Lighthouse Metrics](assets/documentation/mobile-metrics2.png)
 
 | Page | Device | Category | Result |
 |------|--------|----------|--------|
