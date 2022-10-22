@@ -410,6 +410,7 @@ footer {
 
     .controls {
         align-items: flex-end;
+        margin-bottom: 2em;
     }
 
     #instructionsBtn {
