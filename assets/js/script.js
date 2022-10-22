@@ -197,11 +197,11 @@ function results() {
     answerBtns.style.display = "none";
 
     if (score < 3) {
-        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" /><p id="result-text">Sorry ${user.value}, you scored ${score} out of ${maxQuestions}.<br>Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" alt="Mickey Mouse Head Outline" /><p id="result-text">Sorry ${user.value}, you scored ${score} out of ${maxQuestions}.<br>Please try again!</p></div>`;
     } else if (score < 10) {
-        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" /><p id="result-text">Not bad ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" alt="Mickey Mouse Head Outline" /><p id="result-text">Not bad ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Please try again!</p></div>`;
     } else {
-        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" /><p id="result-text">Well done ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Disney Master!</p></div>`;
+        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" alt="Mickey Mouse Head Outline" /><p id="result-text">Well done ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Disney Master!</p></div>`;
     }
 
 }
