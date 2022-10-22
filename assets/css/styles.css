@@ -391,7 +391,7 @@ footer {
 @media only screen and (max-width: 599px) {
     body {
         background-size: contain;
-        height: 120vh;
+        height: 130vh;
     }
 
     header h1 {

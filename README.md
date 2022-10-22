@@ -17,6 +17,7 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
     * [Username Validation](#username-validation)
     * [Header and Footer](#header-and-footer)
     * [Quiz Section](#quiz-section)
+    * [Progress Bar](#progress-bar)
     * [Quiz Buttons](#quiz-buttons)
     * [Results Section](#results-section)
     * [Features Left To Implement](#features-left-to-implement)
