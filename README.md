@@ -14,8 +14,11 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 1. [Features](#features)  
     * [Home Page](#home-page)
+    * [Username Validation](#username-validation)
+    * [Header and Footer](#header-and-footer)
     * [Quiz Section](#quiz-section)
-    * [Results Page](#results-page)
+    * [Quiz Buttons](#quiz-buttons)
+    * [Results Section](#results-section)
     * [Features Left To Implement](#features-left-to-implement)
 2. [User Experience (UX)](#user-experience-ux)
     * [Site Goals](#site-goals)
@@ -44,15 +47,15 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
   - The Home Page features a splash image of the Disney Pictures Logo which is instantly recognizable. This will allow visitors to the site to know the quiz is built around Disney Movies.
 
 ![Index Page](assets/documentation/index-page.png)
-  <br>
 
-### Header and Footer
-  - Across all pages, a header and footer appear. The Header contains a H1 and paragraph, displaying the name of the quiz, as well as a description of what it's about. There is also an image of Mickey Mouse to further show the Disney relation.
-  - The Footer contains a link to my Github, with a FontAwesome icon and a copyright.
-  - Both the header and footer are within a flexbox, for great responsiveness across all devices and screen sizes.
+ - There are 2 buttons on the home page - 1 for instructions and 1 to start the game. The instructions button will open a Modal box, with some text to explain what the quiz is and what the user needs to do.
 
-![Header](assets/documentation/header.png)
-![Footer](assets/documentation/footer.png)
+ ![Instructions Box](assets/documentation/instructions.png)
+
+<br>
+
+[Back to Top](#table-of-contents)
+
 <br>
 
 ### Username Validation
@@ -63,6 +66,22 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 <br>
 
+[Back to Top](#table-of-contents)
+
+<br>
+
+### Header and Footer
+  - Across all pages, a header and footer appear. The Header contains a H1 and paragraph, displaying the name of the quiz, as well as a description of what it's about. There is also an image of Mickey Mouse to further show the Disney relation.
+  - The Footer contains a link to my Github, with a FontAwesome icon and a copyright.
+  - Both the header and footer are within a flexbox, for great responsiveness across all devices and screen sizes.
+
+![Header](assets/documentation/header.png)
+![Footer](assets/documentation/footer.png)
+<br>
+
+[Back to Top](#table-of-contents)
+
+<br>
 
 ### Quiz Section
 
@@ -74,6 +93,18 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 <br>
 
+### Progress Bar
+ 
+ - The progress bar is created through a combination of HTML, CSS and JavaScript. The basic outline is created on the index.html and hid until the quiz is started. With each click on the Next button, the width of the fill on the progress bar increases by 10%, in line with the 10 questions available.
+ - The progress bar was built following a tutorial available on [JavaScript.PlainEnglish.io](https://javascript.plainenglish.io/building-a-progress-bar-in-css-js-html-from-scratch-6449da06042)
+
+![Progress Bar Start](assets/documentation/progress-bar1.png)
+![Progress Bar Middle](assets/documentation/progress-bar2.png)
+
+[Back to Top](#table-of-contents)
+
+<br>
+
 ### Quiz Buttons
 
  - The Quiz buttons are all generated through JavaScript. The inner text will pull from the question array and display on each button.
@@ -81,10 +112,13 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 ![Quiz Buttons Hover Style](assets/documentation/button-hover.png)
 
-
  - When an answer is selected, the correct answer will turn a shade of green and the incorrect ones will turn a shade of red. The selected answer will also highlight with a blue border to match the border of the quiz.
 
 ![Quiz Buttons Selected](assets/documentation/button-selected.png)
+
+<br>
+
+[Back to Top](#table-of-contents)
 
 <br>
 
@@ -96,6 +130,10 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 
 ![Results Section](assets/documentation/results.png)
 ![Results Section](assets/documentation/results-master.png)
+
+<br>
+
+[Back to Top](#table-of-contents)
 
 <br>
 
