@@ -318,7 +318,7 @@ Other Warnings included;
 - All quiz images were found on [Animation Screencaps](https://animationscreencaps.com/)
 - The Disney Logo is from [Yuco.com](https://www.yuco.com/works/disney)
 - The Mickey Mouse image in the header was found on [Pngwing.com](https://www.pngwing.com/en/free-png-avcmk)
-- The outline of Mickey Mouse used in the Results section is from [Pngwing.com](https://www.pngwing.com/en/free-png-mfqez)
+- The outline of Mickey Mouse used in the Results section and as the FavIcon is from [Pngwing.com](https://www.pngwing.com/en/free-png-mfqez)
 - The progress bar is built using code from [Javascript.plainenglish.io](https://javascript.plainenglish.io/building-a-progress-bar-in-css-js-html-from-scratch-6449da06042)
 - Validating the form data was from the Love Maths Project on [Code Institute](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) and the trim method to remove whitespace was found at [W3 Schools](https://www.w3schools.com/jsref/jsref_trim_string.asp)
 - The body background image was found at [WallpaperAccess.com](https://wallpaperaccess.com/mickey-mouse-head-pattern)
