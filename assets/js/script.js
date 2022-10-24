@@ -31,19 +31,19 @@ let span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 instructionsBtn.onclick = function () {
     modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};
 
 /** 
  * startGame function will hide the Disney logo, start button and username input,
@@ -150,7 +150,7 @@ function nextQuestion() {
 function resetForNextQuestion() {
     clearStatusClass(document.body);
     nextBtn.classList.add('hide');
-    
+
     //remove buttons
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild);
