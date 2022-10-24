@@ -398,7 +398,7 @@ footer {
 @media only screen and (max-width: 599px) {
     body {
         background-size: contain;
-        height: 130vh;
+        max-height: 130vh;
     }
 
     header h1 {
@@ -450,7 +450,7 @@ footer {
     }
 
     #quiz-image {
-        width: 100%;
+        width: 120%;
         margin: 10px;
         border: 3px solid #B6C7FB
     }
