@@ -236,11 +236,11 @@ The main goal of the website is to encourage visitors, disney fans and movie fan
 
 * Metrics Returned:
 
-    * There are 19 functions in this file.
+    * There are 18 functions in this file.
 
     * Function with the largest signature take 2 arguments, while the median is 0.
 
-    * Largest function has 11 statements in it, while the median is 3.
+    * Largest function has 11 statements in it, while the median is 2.5.
 
     * The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
@@ -249,6 +249,8 @@ The main goal of the website is to encourage visitors, disney fans and movie fan
       - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
       - 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
       -	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+
+    * When JSHint is configured to show "New JavaScript features (ES6)", there are no more warnings.
 
 
 Other Warnings included;
