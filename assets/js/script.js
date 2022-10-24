@@ -1,7 +1,3 @@
-/**
- * The basic logic of this quiz was built using a code-along tutorial (https://www.youtube.com/watch?v=riDzcEQbX6k)
- */
-
 // Declare all variables used in the script
 const startButton = document.getElementById('start-btn');
 const quizSection = document.getElementById('quiz');
@@ -79,6 +75,7 @@ function startGame() {
 function handleSubmit(event) {
     event.preventDefault();
 
+    // Validate username
     let username = document.getElementById('username').value;
 
     if (username.trim() === '') {
@@ -123,6 +120,7 @@ function showQuestion(myQuestions) {
             button.style.borderStyle = 'inset';
         }
 
+        // If answer is correct, give the button the dataset correct and corresponding color in styles.css
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
@@ -152,6 +150,8 @@ function nextQuestion() {
 function resetForNextQuestion() {
     clearStatusClass(document.body);
     nextBtn.classList.add('hide');
+    
+    //remove buttons
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild);
     }
@@ -161,6 +161,7 @@ function resetForNextQuestion() {
  * When an answer is selected, add 1 to the score for every correct answer,
  * add the correct and incorrect class to buttons for each answer and disable buttons.
  * Show Next Button until the array ends, then show results
+ * Adapted from code-along tutorial (https://www.youtube.com/watch?v=riDzcEQbX6k)
  */
 function selectAnswer(event) {
     const selectedAnswer = event.target;
@@ -216,6 +217,7 @@ function restart() {
 
 /**
  * Add the class "correct" or "incorrect" to the buttons when selected
+ * Adapted from code-along tutorial (https://www.youtube.com/watch?v=riDzcEQbX6k)
  */
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -228,6 +230,7 @@ function setStatusClass(element, correct) {
 
 /**
  * Clear class "correct" or "incorrect" on the buttons
+ * Adapted from code-along tutorial (https://www.youtube.com/watch?v=riDzcEQbX6k)
  */
 function clearStatusClass(element) {
     element.classList.remove('correct');
