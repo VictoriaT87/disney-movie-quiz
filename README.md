@@ -314,7 +314,7 @@ Other Warnings included;
 
 # Credits and Sources
 
-- The basic quiz logic was built using the code-along tutorial from [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
+- The basic quiz logic of creating buttons and colouring them was built using the code-along tutorial from [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
 - All quiz images were found on [Animation Screencaps](https://animationscreencaps.com/)
 - The Disney Logo is from [Yuco.com](https://www.yuco.com/works/disney)
 - The Mickey Mouse image in the header was found on [Pngwing.com](https://www.pngwing.com/en/free-png-avcmk)
