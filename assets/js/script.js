@@ -259,7 +259,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/princessfrog.webp',
+    question: 'assets/images/princess-frog.webp',
     answers: [{
         text: 'Tangled',
         correct: false
@@ -399,7 +399,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/emperors-new-groove.webp',
+    question: 'assets/images/emperors.webp',
     answers: [{
         text: 'Tarzan',
         correct: false
@@ -419,7 +419,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/lionking.webp',
+    question: 'assets/images/lion-king.webp',
     answers: [{
         text: 'The Lion King',
         correct: true
