@@ -290,7 +290,7 @@ Other Warnings included;
 
 ### Other Testing
  - The website has been tested across various screen sizes, using the Chrome DevTools responsive device section, [Responsive Design Checker](https://responsivedesignchecker.com/) and by opening the website on Firefox, Chrome, 3 various sized Android phones (Huawei P20 Lite, OnePlus 9 Pro, Samsung Galaxy S20) and an Android tablet (Samsung Galaxy Tab 10). 
- - [Markdown file of device screenshots](assets/documentation/tested-devices.md)
+ - Here is a link to a separate [Markdown file](assets/documentation/tested-devices.md)  of device screenshots.
 
  <br>
 
