@@ -144,6 +144,7 @@ Welcome to the Disney Movie Quiz! This online quiz is built using HTML, CSS and 
 - Adding more questions, so there is a larger pool of possible questions and answers to pull from would give the quiz more replayability.
 - Give an option to share the quiz and results on social media, to generate more interest in it.
 - Adding a timer to each question. This would make sure people weren't cheating by googling the answer.
+- Add a random functionality to the answer buttons, so they show in a different place each time.
 
 <br>
 
