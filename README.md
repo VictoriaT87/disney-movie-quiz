@@ -264,7 +264,7 @@ Other Warnings included;
   
 ![Lighthouse Report](assets/documentation/index-lighthouse.png)
 
- - On mobile, the performace is 95. This was because of a cumulative layout shift of 0.154. Recommendations for this were to add width and height to images and change the images to .webp format.
+ - On mobile, the performace is 96. This is because of a cumulative layout shift of 0.154. Recommendations for this were to add width and height to images and change the images to .webp format.
  - To change images from .jpg to .webp I used the website [WEBP Converter](https://cloudconvert.com/webp-converter).
  - Even after these changes, there is still a CLS of 0.154. As I have already given everything a max-width and height, this is the best I can achieve.
  - I also received a red warning for First Contentful Paint. The warning was telling me to "Eliminate render-blocking resources". After googling this issure, I found this website [LogRocket.com](https://blog.logrocket.com/9-tricks-eliminate-render-blocking-resources/#load-custom-fonts-locally) and after reading, felt my best option to reduce this was to load the styles.css file in the header of the index.html page, instead of using the @import method in styles.css. This fixed the issue. 
