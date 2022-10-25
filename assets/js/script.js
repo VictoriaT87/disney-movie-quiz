@@ -24,24 +24,24 @@ let width = 0;
 /**
  * Modal Box for Instructions - found on https://www.w3schools.com/howto/howto_css_modals.asp
  */
-let modal = document.getElementById("instructions");
-let instructionsBtn = document.getElementById("instructionsBtn");
-let span = document.getElementsByClassName("close")[0];
+let modal = document.getElementById('instructions');
+let instructionsBtn = document.getElementById('instructionsBtn');
+let span = document.getElementsByClassName('close')[0];
 
 // When the user clicks on the button, open the modal
 instructionsBtn.onclick = function () {
-    modal.style.display = "block";
+    modal.style.display = 'block';
 };
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-    modal.style.display = "none";
+    modal.style.display = 'none';
 };
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
     }
 };
 
@@ -52,10 +52,10 @@ window.onclick = function (event) {
 function startGame() {
     instructionsBtn.classList.add('hide');
     startButton.classList.add('hide');
-    document.getElementById('logo').style.display = "none";
-    counter.style.display = "flex";
-    form.style.display = "none";
-    answerBtns.style.display = "grid";
+    document.getElementById('logo').style.display = 'none';
+    counter.style.display = 'flex';
+    form.style.display = 'none';
+    answerBtns.style.display = 'grid';
 
     currentQuestion = 0;
 
@@ -79,11 +79,11 @@ function handleSubmit(event) {
     let username = document.getElementById('username').value;
 
     if (username.trim() === '') {
-        errorDiv.innerHTML = "<p>Please enter a username!</p>";
+        errorDiv.innerHTML = '<p>Please enter a username!</p>';
     } else if (username.length <= Number(2)) {
-        errorDiv.innerHTML = "<p>Username must have 3 or more characters</p>";
+        errorDiv.innerHTML = '<p>Username must have 3 or more characters</p>';
     } else if (username.length > Number(8)) {
-        errorDiv.innerHTML = "<p>Username must have 8 or less characters</p>";
+        errorDiv.innerHTML = '<p>Username must have 8 or less characters</p>';
     } else {
         startGame();
     }
@@ -104,12 +104,12 @@ restartBtn.addEventListener('click', restart);
  * Append buttons to index.html
  */
 function showQuestion(myQuestions) {
-    questionSection.innerHTML = `<img src=${myQuestions.question} id="quiz-image">`;
+    questionSection.innerHTML = `<img src=${myQuestions.question} id='quiz-image'>`;
 
     //create a button for each answer, add text to each from array
     myQuestions.answers.forEach(answer => {
 
-        const button = document.createElement("button");
+        const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn', 'btn-hover');
         button.onclick = highlight;
@@ -184,7 +184,7 @@ function selectAnswer(event) {
         nextBtn.classList.remove('hide');
     } else {
         nextBtn.innerText = 'Results';
-        counter.style.display = "none";
+        counter.style.display = 'none';
         restartBtn.classList.remove('hide');
         results();
     }
@@ -195,14 +195,14 @@ function selectAnswer(event) {
  * Shows 3 different variations, depending on the user's score
  */
 function results() {
-    answerBtns.style.display = "none";
+    answerBtns.style.display = 'none';
 
     if (score < 3) {
-        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" alt="Mickey Mouse Head Outline" /><p id="result-text">Sorry ${user.value}, you scored ${score} out of ${maxQuestions}.<br>Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id='results-div'><img src='assets/images/mickey-outline.png' alt='Mickey Mouse Head Outline' /><p id='result-text'>Sorry ${user.value}, you scored ${score} out of ${maxQuestions}.<br>Please try again!</p></div>`;
     } else if (score < 10) {
-        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" alt="Mickey Mouse Head Outline" /><p id="result-text">Not bad ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Please try again!</p></div>`;
+        questionSection.innerHTML = `<div id='results-div'><img src='assets/images/mickey-outline.png' alt='Mickey Mouse Head Outline' /><p id='result-text'>Not bad ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Please try again!</p></div>`;
     } else {
-        questionSection.innerHTML = `<div id="results-div"><img src="assets/images/mickey-outline.png" alt="Mickey Mouse Head Outline" /><p id="result-text">Well done ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Disney Master!</p></div>`;
+        questionSection.innerHTML = `<div id='results-div'><img src='assets/images/mickey-outline.png' alt='Mickey Mouse Head Outline' /><p id='result-text'>Well done ${user.value}, you scored ${score} out of ${maxQuestions}!<br>Disney Master!</p></div>`;
     }
 
 }
@@ -216,7 +216,7 @@ function restart() {
 }
 
 /**
- * Add the class "correct" or "incorrect" to the buttons when selected
+ * Add the class 'correct' or 'incorrect' to the buttons when selected
  * Adapted from code-along tutorial (https://www.youtube.com/watch?v=riDzcEQbX6k)
  */
 function setStatusClass(element, correct) {
@@ -229,7 +229,7 @@ function setStatusClass(element, correct) {
 }
 
 /**
- * Clear class "correct" or "incorrect" on the buttons
+ * Clear class 'correct' or 'incorrect' on the buttons
  * Adapted from code-along tutorial (https://www.youtube.com/watch?v=riDzcEQbX6k)
  */
 function clearStatusClass(element) {
