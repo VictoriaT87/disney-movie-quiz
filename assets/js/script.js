@@ -239,7 +239,7 @@ function clearStatusClass(element) {
 
 // Question array
 const myQuestions = [{
-    question: 'assets/images/mulan.jpg',
+    question: 'assets/images/mulan.webp',
     answers: [{
         text: 'Aladdin',
         correct: false
@@ -259,7 +259,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/princessfrog.jpg',
+    question: 'assets/images/princessfrog.webp',
     answers: [{
         text: 'Tangled',
         correct: false
@@ -279,7 +279,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/batb.jpg',
+    question: 'assets/images/batb.webp',
     answers: [{
         text: 'The Little Mermaid',
         correct: false
@@ -299,7 +299,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/hercules.jpg',
+    question: 'assets/images/hercules.webp',
     answers: [{
         text: 'Ratatouille',
         correct: false
@@ -319,7 +319,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/tangled.jpg',
+    question: 'assets/images/tangled.webp',
     answers: [{
         text: 'Tangled',
         correct: true
@@ -339,7 +339,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/lilo.jpg',
+    question: 'assets/images/lilo.webp',
     answers: [{
         text: 'Brave',
         correct: false
@@ -359,7 +359,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/toy-story.jpg',
+    question: 'assets/images/toy-story.webp',
     answers: [{
         text: 'Toy Story',
         correct: true
@@ -379,7 +379,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/aladdin.jpg',
+    question: 'assets/images/aladdin.webp',
     answers: [{
         text: '101 Dalmations',
         correct: false
@@ -399,7 +399,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/emperors-new-groove.jpg',
+    question: 'assets/images/emperors-new-groove.webp',
     answers: [{
         text: 'Tarzan',
         correct: false
@@ -419,7 +419,7 @@ const myQuestions = [{
     ]
 },
 {
-    question: 'assets/images/lionking.jpg',
+    question: 'assets/images/lionking.webp',
     answers: [{
         text: 'The Lion King',
         correct: true
